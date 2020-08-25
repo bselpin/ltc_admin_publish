@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,SAAS,AAAC,CACR,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,aAAa,CAC9B,cAAc,CAAE,IAAI,CACrB,AAED,AAAA,UAAU,AAAC,CACT,KAAK,CAAE,IAAI,CACX,QAAQ,CAAE,QAAQ,CAQnB,AAVD,AAIE,UAJQ,CAIR,SAAS,AAAC,CACR,QAAQ,CAAE,QAAQ,CAClB,UAAU,CAAE,MAAM,CAClB,KAAK,CAAE,CAAC,CACR,MAAM,CAAE,CAAC,CACV",
+    "sources": [
+        "guide.scss",
+        "Variables.scss"
+    ],
+    "names": [],
+    "file": "guide.min.css"
+}

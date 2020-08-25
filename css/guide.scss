@@ -1,0 +1,22 @@
+@import "Variables.scss";
+
+// guide, guide_write, guide_detail페이지 스타일
+
+.util-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.table-box {
+  width: 100%;
+  position: relative;
+
+  .row-unit {
+    position: absolute;
+    margin-top: 1.5rem;
+    right: 0;
+    bottom: 0;
+  }
+}

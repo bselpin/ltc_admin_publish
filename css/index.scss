@@ -1,0 +1,615 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap");
+@import "Variables.scss";
+
+// 기본적인 공통 스타일링과 로그인
+// 화면은 index에 스타일 지정
+
+// 스타일 초기화
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+// html 기본
+html {
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// input 스타일 기본 정의
+input {
+  border: 1px solid $gray;
+  outline: none;
+  background: $white;
+  padding: 0.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+
+  &.full {
+    width: 100%;
+  }
+
+  &:focus {
+    border-color: $main;
+  }
+}
+
+// 검색인풋창 스타일
+.search-input {
+  width: 20rem;
+  margin-left: 1rem;
+}
+
+// select 스타일 기본 정의
+select {
+  padding: 0.25rem 2rem 0.25rem 0.25rem;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: $gray;
+}
+
+// ul과 li스타일 제거
+ul,
+li {
+  list-style: none;
+}
+
+// button 스타일 기본 정의
+button {
+  border: none;
+  outline: none;
+  background: $main;
+  transition: all 0.3s $easing;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: $white;
+  font-weight: 500;
+  height: 2.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &.wide {
+    padding: 0.75rem;
+    height: auto;
+    font-size: 1.25rem;
+  }
+
+  &.sub-btn {
+    background: $white;
+    border: 1px solid $main;
+    color: $main;
+  }
+
+  &.del-btn {
+    background: $red;
+    color: $white;
+    border-color: $red;
+  }
+
+  &.mr {
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &.search-btn {
+    display: inline-block;
+    border-radius: 0;
+    background-image: url("../img/search.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    width: 2.5rem;
+  }
+}
+
+// textarea 기본 스타일 정의
+textarea {
+  width: 100%;
+  resize: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-top: 1rem;
+  font-weight: 300;
+  border-color: $gray;
+  margin-bottom: 1rem;
+
+  &:focus {
+    border-color: $main;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $gray;
+  }
+}
+
+h1 {
+  span {
+    font-weight: 300;
+  }
+
+  .back-btn {
+    background: url("../img/back.svg") 0 center no-repeat;
+    display: inline-block;
+    width: 3rem;
+    height: 2rem;
+  }
+}
+
+// 로그인 관련 스타일링
+.login-box {
+  width: 70rem;
+  height: 45rem;
+  background: $white;
+  display: flex;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
+
+  .login-box__boxes {
+    width: 50%;
+    height: 45rem;
+  }
+
+  .boxes__bg {
+    background: url("../img/login.jpg") right center no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .boxes__inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+
+    h1 {
+      width: 100%;
+
+      img {
+        width: 7rem;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .login-input-box {
+    margin-top: 7rem;
+
+    label {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      display: block;
+      margin-top: 1.5rem;
+    }
+  }
+
+  .login-input {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 1px solid $gray;
+    padding: 0.5rem 0;
+    height: auto;
+
+    &:focus {
+      border-color: $main;
+    }
+  }
+
+  .login-btn {
+    margin-top: 7rem;
+    height: auto;
+    padding: 1rem;
+    width: 100%;
+
+    a {
+      font-weight: 600;
+      font-size: 1.25rem;
+      display: block;
+      color: $white;
+    }
+  }
+}
+
+.main-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  img {
+    width: 8rem;
+    display: block;
+  }
+}
+
+// 기본 main-wrapper
+.main-wrap {
+  width: 100%;
+  height: 100vh;
+  background: $back;
+
+  &.login-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// 좌측 고정 메뉴 스타일
+.main-menu {
+  width: 19rem;
+  height: 100vh;
+  background: $white;
+  color: $black;
+  box-shadow: 3px 0 10px rgba(50, 70, 90, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  .menu-wrap {
+    width: 100%;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+
+    .menu-list {
+      border-bottom: 1px solid $gray;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        position: absolute;
+        top: 1.25rem;
+        left: 2.25rem;
+      }
+
+      &:nth-child(1) {
+        &:before {
+          background: url("../img/menu-01.png") 0 center no-repeat;
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(2) {
+        &:before {
+          background: url("../img/menu-01.png") -1.5rem center no-repeat;
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(3) {
+        &:before {
+          background: url("../img/menu-01.png") -3rem center no-repeat;
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(4) {
+        border: none;
+
+        &:before {
+          background: url("../img/menu-01.png") -4.5rem center no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+
+    span {
+      font-weight: 500;
+      transition: all 0.2s $easing;
+      padding: 1rem 0 1rem 5rem;
+      display: block;
+
+      &.active {
+        color: $main;
+        font-weight: 600;
+      }
+
+      &:not(.active):hover {
+        opacity: 0.5;
+      }
+    }
+
+    .menu-list-sub {
+      margin-top: -0.75rem;
+      margin-bottom: 0.5rem;
+
+      li {
+        padding: 0.4rem 0;
+        font-size: 1rem;
+        font-weight: 300;
+        margin-left: 5rem;
+
+        &.mt {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .logout {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid $gray;
+    color: $dark;
+    padding: 0.35rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+// 컨텐츠 표시 영역 지정 스타일
+.content-wrap {
+  width: calc(100vw - 19rem);
+  height: 100vw;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: $back;
+  padding: 1rem 2rem 2rem;
+
+  .content-title {
+    font-size: 2.5rem;
+  }
+
+  .content-box {
+    width: 100%;
+    background: $white;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
+    max-height: calc(100vh - 8rem);
+    overflow: hidden;
+  }
+}
+
+// 테이블 기본 스타일 정의
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 1px solid $dark;
+
+    td {
+      padding: 1rem;
+    }
+  }
+
+  tbody {
+    width: 100%;
+    font-weight: 300;
+
+    tr {
+      border-top: 1px solid $gray;
+
+      &:first-child {
+        border: none;
+      }
+    }
+
+    tr:nth-child(2n) {
+      background: $gray3;
+    }
+
+    tr:hover {
+      background: $gray2;
+      cursor: pointer;
+    }
+
+    td {
+      padding: 0.9rem 0;
+    }
+
+    .table-title {
+      padding-left: 3rem;
+    }
+
+    .tac {
+      text-align: center;
+    }
+
+    .w8 {
+      width: 8rem;
+    }
+
+    .w10 {
+      width: 10rem;
+    }
+
+    .w15 {
+      width: 15rem;
+    }
+
+    .w20 {
+      width: 20rem;
+    }
+  }
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+
+  span {
+    border: 1px solid $gray4;
+    font-weight: 300;
+    padding: 0.25rem 0.5rem;
+    width: 2rem;
+    text-align: center;
+    border-right: none;
+    color: $dark2;
+    cursor: pointer;
+
+    &:nth-child(11) {
+      border-right: 1px solid $gray4;
+      width: 2.25rem;
+    }
+
+    &:hover {
+      background: $gray2;
+    }
+
+    &.active {
+      background: $main;
+      color: $white;
+      border-color: $white;
+      font-weight: 500;
+    }
+  }
+
+  .pagination__prev-btn {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    background: url("../img/arrow-01.png") 0 center no-repeat;
+    background-size: cover;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .pagination__next-btn {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    background: url("../img/arrow-01.png") -2rem center no-repeat;
+    background-size: cover;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// flex center클래스
+.jcc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+// 임시 엘레먼트 스타일
+.temp {
+  color: $main;
+  text-decoration: underline;
+}
+
+.util__search {
+  display: flex;
+  align-items: center;
+}
+
+.util-btn__box {
+  &.fe {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.detail-header {
+  display: flex;
+  font-size: 1.1rem;
+  border-bottom: 1px solid $dark;
+  padding-bottom: 1.5rem;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-top: 0.3rem;
+
+  .category {
+    border: 1px solid $main;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+    color: $main;
+    font-weight: 400;
+    border-radius: 0.75rem;
+  }
+
+  .label {
+    color: $dark2;
+    font-size: 0.9rem;
+
+    &.ml {
+      margin-left: 2rem;
+    }
+  }
+
+  .text {
+    margin-left: 1rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+
+  .title {
+    margin-left: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .header__util {
+    position: absolute;
+    right: 0;
+
+    .del-btn {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.detail-body {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 2.2;
+  padding: 4rem 8rem 10rem 1.5rem;
+  max-height: calc(100vh - 20rem);
+  overflow-y: auto;
+  border-bottom: 1px solid $dark;
+  margin-bottom: 1rem;
+}

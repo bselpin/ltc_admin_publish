@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>또가 - 관리자 페이지</title>
+    <link rel="stylesheet" href="css/index.min.css" />
+    <link rel="stylesheet" href="css/guide.min.css" />
+  </head>
+  <body>
+    <div class="main-wrap">
+      <!-- 좌측 고정 menu, index 제외한 전 페이지 공통 -->
+      <div class="main-menu">
+        <h1 class="main-logo">
+          <a href="/"><img src="img/logo.png" alt="" /></a>
+        </h1>
+        <div class="menu-wrap">
+          <ul>
+            <li class="menu-list">
+              <a href="guide.html"
+                ><span class="active">요양시설 가이드</span></a
+              >
+            </li>
+            <li class="menu-list">
+              <span>Q&A</span>
+              <ul class="menu-list-sub">
+                <li><a href="qna_manage.html">Q&A 관리</a></li>
+                <li><a href="qna_report.html">Q&A 신고</a></li>
+              </ul>
+            </li>
+            <li class="menu-list">
+              <a href="care.html"><span>요양시설 조회 / 관리</span></a>
+            </li>
+            <li class="menu-list">
+              <a href="user.html"><span>회원관리</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="logout"><a href="index.html">로그아웃</a></div>
+      </div>
+      <!-- 좌측 고정 menu end -->
+
+      <!-- content 표시 영역 -->
+      <div class="content-wrap">
+        <h1 class="content-title">요양시설 가이드</h1>
+        <div class="content-box">
+          <div class="util-box">
+            <div class="util__search">
+              <select name="category" id="category">
+                <option value="0">요양시설의 종류</option>
+                <option value="0">요양시설의 선택</option>
+                <option value="0">요양시설의 생활</option>
+                <option value="0">장기요양보험</option>
+              </select>
+              <input type="text" class="search-input" />
+              <button class="search-btn"></button>
+            </div>
+
+            <div class="util-btn__box">
+              <button><a href="guide_write.html">글쓰기</a></button>
+            </div>
+          </div>
+
+          <!-- table공통, div.table-box하위에 테이블 생성 -->
+          <div class="table-box">
+            <table>
+              <thead>
+                <tr>
+                  <td>카테고리</td>
+                  <td>제목</td>
+                  <td>조회수</td>
+                  <td>작성자</td>
+                  <td>작성일</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+                <tr>
+                  <td class="tac w10">요양시설의 종류</td>
+                  <td class="table-title">요양시설의 종류에 대해서</td>
+                  <td class="tac w8">1534</td>
+                  <td class="tac w10">요양병원 관리자</td>
+                  <td class="tac w8">2020-09-24</td>
+                </tr>
+              </tbody>
+            </table>
+            <select name="row-unit" class="row-unit">
+              <option value="">10줄 보기</option>
+              <option value="">8줄 보기</option>
+              <option value="">5줄 보기</option>
+            </select>
+
+            <!-- 페이지네이션, span에 active로 스타일 활성화 -->
+            <div class="pagination">
+              <p class="pagination__prev-btn"></p>
+              <span class="active">1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <p class="pagination__next-btn"></p>
+            </div>
+            <!-- 본문페이지로 들어가기 위한 임시 링크 -->
+            <div class="temp"><a href="guide_detail.html">본문 보기</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- content 표시 영역 end -->
+    </div>
+  </body>
+</html>

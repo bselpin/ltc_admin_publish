@@ -20,3 +20,76 @@
     bottom: 0;
   }
 }
+
+// 본문 디테일 페이지 헤더
+.detail-header {
+  display: flex;
+  font-size: 1.1rem;
+  border-bottom: 1px solid $gray;
+  padding-bottom: 1.5rem;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-top: 0.3rem;
+
+  .label {
+    color: $dark2;
+    font-size: 0.9rem;
+
+    &.ml {
+      margin-left: 2rem;
+    }
+  }
+
+  .text {
+    margin-left: 1rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+
+  .title {
+    margin-left: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .header__util {
+    position: absolute;
+    right: 0;
+
+    .del-btn {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+// 본문 디테일 페이지 바디
+.detail-body {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 2.2;
+  padding: 4rem 8rem 10rem 5rem;
+  max-height: calc(100vh - 20rem);
+  overflow-y: auto;
+  border-bottom: 1px solid $gray;
+  margin-bottom: 1rem;
+
+  .detail-body__info {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $dark2;
+    margin-top: 3rem;
+    width: 100%;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 1rem;
+
+    .divider {
+      display: inline-block;
+      height: 0.9rem;
+      width: 1px;
+      background: $dark2;
+      margin: 0 0.75rem;
+      transform: translateY(0.15rem);
+    }
+  }
+}

@@ -38,7 +38,7 @@
       color: $gray !important;
 
       span {
-        color: $gray !important;
+        color: $gray;
       }
     }
 
@@ -106,7 +106,7 @@
 .reply-util {
   position: relative;
 
-  .reply-util__confirm {
+  .reply-util-confirm {
     position: absolute;
     background: $white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -166,5 +166,25 @@
         filter: brightness(0.95);
       }
     }
+  }
+}
+
+.reported {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: $red !important;
+  margin-left: 2.5rem;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    background: url("../img/reported.svg") center no-repeat;
+    background-size: cover;
+    width: 1.75rem;
+    height: 1.75rem;
+    position: absolute;
+    top: -0.05rem;
+    left: -1.75rem;
   }
 }

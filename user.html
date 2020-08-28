@@ -6,6 +6,8 @@
     <title>또가 - 관리자 페이지</title>
     <link rel="stylesheet" href="css/index.min.css" />
     <link rel="stylesheet" href="css/guide.min.css" />
+    <link rel="stylesheet" href="css/qna.min.css" />
+    <link rel="stylesheet" href="css/user.min.css" />
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
@@ -49,106 +51,129 @@
       <!-- content 표시 영역 -->
       <div class="content-wrap">
         <h1 class="content-title">회원관리</h1>
-        <div class="content-box">
-          <div class="util-box">
-            <div class="util__search">
-              <select name="category" id="category">
-                <option value="0">요양시설의 종류</option>
-                <option value="0">요양시설의 선택</option>
-                <option value="0">요양시설의 생활</option>
-                <option value="0">장기요양보험</option>
-              </select>
-              <input type="text" class="search-input" />
-              <button class="search-btn"></button>
-            </div>
 
-            <div class="util-btn__box">
-              <button><a href="guide_write.html">글쓰기</a></button>
+        <!-- util-box 표시 영역 -->
+        <div class="util-box">
+          <div class="util__search">
+            <div class="input-box">
+              <p class="util__label">이메일 / 닉네임</p>
+              <div class="input-div">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="이메일 및 닉네임 검색어"
+                />
+                <button class="search-btn"></button>
+              </div>
             </div>
           </div>
+        </div>
 
+        <div class="content-box">
           <!-- table공통, div.table-box하위에 테이블 생성 -->
           <div class="table-box">
             <table>
               <thead>
                 <tr>
-                  <td>카테고리</td>
-                  <td>제목</td>
-                  <td>조회수</td>
-                  <td>작성자</td>
-                  <td>작성일</td>
+                  <td>이메일</td>
+                  <td>닉네임</td>
+                  <td>방문수</td>
+                  <td>질문수</td>
+                  <td>답변수</td>
+                  <td>댓글수</td>
+                  <td>리뷰수</td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">brain@brainhealthcare.co.kr</td>
+                  <td class="tac w20">브레인</td>
+                  <td class="tac w10">153</td>
+                  <td class="tac w10">5</td>
+                  <td class="tac w10">10</td>
+                  <td class="tac w10">15</td>
+                  <td class="tac w10">3</td>
                 </tr>
               </tbody>
             </table>

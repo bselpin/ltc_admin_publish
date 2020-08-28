@@ -1,0 +1,15 @@
+@import "Variables.scss";
+
+.util__search {
+  ._temp-datepicker {
+    font-weight: 300;
+    font-size: 1rem;
+    height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid $dark2;
+  }
+
+  .divider {
+    margin: 0 0.75rem;
+  }
+}

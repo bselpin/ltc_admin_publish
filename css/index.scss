@@ -73,7 +73,6 @@ input {
 // 검색인풋창 스타일
 .search-input {
   width: 20rem;
-  margin-left: 1rem;
 }
 
 // select 스타일 기본 정의
@@ -440,8 +439,42 @@ h1 {
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
-    max-height: calc(100vh - 8rem);
+    max-height: calc(100vh - 16.5rem);
     overflow: hidden;
+
+    &.box__height {
+      max-height: calc(100vh - 7rem);
+    }
+  }
+}
+
+// 유틸 기본 스타일 지정
+.util-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  align-items: flex-end;
+  background: $white;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+
+  .input-box {
+    &.ml {
+      margin-left: 1.5rem;
+    }
+
+    .input-div {
+      display: flex;
+      align-items: center;
+    }
+
+    .util__label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
   }
 }
 
@@ -625,13 +658,15 @@ table {
   }
 
   .popup__title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 500;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .popup__text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 2;
   }
 
   .popup-btn-box {

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>또가 - 관리자 페이지</title>
+    <link rel="stylesheet" href="css/index.min.css" />
+    <link rel="stylesheet" href="css/guide.min.css" />
+    <link rel="stylesheet" href="css/qna.min.css" />
+    <link rel="stylesheet" href="css/user.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="main-wrap">
+      <!-- 좌측 고정 menu, index 제외한 전 페이지 공통 -->
+      <div class="main-menu">
+        <h1 class="main-logo">
+          <a href="index.html"><img src="img/logo.png" alt="" /></a>
+        </h1>
+        <div class="menu-wrap">
+          <ul>
+            <li class="menu-list">
+              <a href="guide.html"><span>요양시설 가이드</span></a>
+            </li>
+            <li class="menu-list">
+              <a href="qna.html"><span>Q&A 관리</span></a>
+            </li>
+            <li class="menu-list">
+              <a href="care.html"><span>요양시설 조회관리</span></a>
+            </li>
+            <li class="menu-list">
+              <a href="user.html"><span class="active">회원관리</span></a>
+            </li>
+            <li class="menu-list">
+              <a href="menu.html"><span>메뉴관리</span></a>
+            </li>
+            <li class="menu-list">
+              <a href="auth.html"><span>권한관리</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="logout"><a href="index.html">로그아웃</a></div>
+      </div>
+      <!-- 좌측 고정 menu end -->
+
+      <!-- content 표시 영역 -->
+      <div class="content-wrap">
+        <h1 class="content-title">
+          <a href="care.html">
+            <span class="back-btn"></span>
+          </a>
+          <span>회원 상세보기</span>
+        </h1>
+
+        <!-- util-box 표시 영역 -->
+        <div class="util-box">
+          <div class="util__search">
+            <div class="input-box">
+              <p class="util__label">이메일</p>
+              <p class="util__text">brainhealthcare.co.kr</p>
+            </div>
+            <div class="input-box ml-2">
+              <p class="util__label">닉네임</p>
+              <p class="util__text">브레인</p>
+            </div>
+            <div class="input-box ml-2">
+              <p class="util__label">분류</p>
+              <div class="tabs">
+                <ul>
+                  <!-- 활성화된 li에 active 추가 -->
+                  <li>
+                    <a href="user_detail_q.html"
+                      ><span>질문</span><span class="count">(12)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="user_detail_a.html"
+                      ><span>답변</span><span class="count">(24)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="user_detail_d.html"
+                      ><span>댓글</span><span class="count">(5)</span></a
+                    >
+                  </li>
+                  <li class="active">
+                    <a href="user_detail_r.html"
+                      ><span>리뷰</span><span class="count">(16)</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="input-box ml-2">
+              <p class="util__label">검색어 입력</p>
+              <div class="input-div">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="제목 및 작성자 검색어"
+                />
+                <button class="search-btn"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <!-- table공통, div.table-box하위에 테이블 생성 -->
+          <div class="table-box">
+            <table>
+              <thead>
+                <tr>
+                  <!-- sort기능이 필요한 헤드의 경우 span에 sort클래스 삽입 -->
+                  <td><span>리뷰 내용</span></td>
+                  <td><span>작성일</span></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+                <tr>
+                  <td class="table-title">
+                    <p class="wide">
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로 노인요양보호사는 꼭 기관과 연결되어야만
+                      일을 할 수 있나요? 아님. 개인적으로. 개인적으로
+                      노인요양보호사는 꼭 기관과 연결되어야만 일을 할 수 있나요?
+                      아님. 개인적으로
+                    </p>
+                  </td>
+                  <td class="tac w10">2020-08-31</td>
+                </tr>
+              </tbody>
+            </table>
+            <select name="row-unit" class="row-unit">
+              <option value="">10줄 보기</option>
+              <option value="">8줄 보기</option>
+              <option value="">5줄 보기</option>
+            </select>
+
+            <!-- 페이지네이션, span에 active로 스타일 활성화 -->
+            <div class="pagination">
+              <p class="pagination__prev-btn"></p>
+              <span class="active">1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <p class="pagination__next-btn"></p>
+            </div>
+            <!-- 본문페이지로 들어가기 위한 임시 링크 -->
+            <!-- <div class="temp">
+              <a href="guide_detail.html">본문 보기 임시버튼</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- content 표시 영역 end -->
+    </div>
+  </body>
+</html>

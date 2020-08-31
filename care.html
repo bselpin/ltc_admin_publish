@@ -57,30 +57,43 @@
         <div class="util-box">
           <div class="util__search">
             <div class="input-box">
-              <p class="util__label">카테고리</p>
+              <p class="util__label">기관종류</p>
               <select name="category" id="category">
-                <option value="0">요양시설의 종류</option>
-                <option value="0">요양시설의 선택</option>
-                <option value="0">요양시설의 생활</option>
-                <option value="0">장기요양보험</option>
+                <option value="0">요양병원</option>
+                <option value="0">요양원</option>
+                <option value="0">주야간보호</option>
+                <option value="0">방문시설</option>
               </select>
             </div>
             <div class="input-box ml">
-              <p class="util__label">검색어 입력</p>
+              <p class="util__label">지역</p>
+              <div class="input-div">
+                <select name="main" id="main">
+                  <option value="0">전체</option>
+                  <option value="0">서울</option>
+                  <option value="0">인천</option>
+                  <option value="0">경기</option>
+                </select>
+                <select name="sub" id="sub" class="ml">
+                  <option value="0">강남구</option>
+                  <option value="0">구로구</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-box ml">
+              <p class="util__label">기관명 검색</p>
               <div class="input-div">
                 <input
                   type="text"
                   class="search-input"
-                  placeholder="제목 및 작성자 검색"
+                  placeholder="기관명 검색어"
                 />
-                <button class="search-btn"></button>
               </div>
             </div>
+            <button class="ml">검색</button>
           </div>
 
-          <div class="util-btn__box">
-            <button><a href="guide_write.html">글쓰기</a></button>
-          </div>
+          <div class="util-btn__box"></div>
         </div>
 
         <!-- content 표시 영역 -->
@@ -90,83 +103,125 @@
             <table>
               <thead>
                 <tr>
-                  <td>카테고리</td>
-                  <td>제목</td>
-                  <td>조회수</td>
-                  <td>작성자</td>
-                  <td>작성일</td>
+                  <td><span>요양기관명</span></td>
+                  <td><span class="sort">평가등급</span></td>
+                  <td><span class="sort">정원</span></td>
+                  <td><span class="sort">조회수</span></td>
+                  <td><span class="sort">리뷰 평점</span></td>
+                  <td><span class="sort">리뷰수</span></td>
+                  <td><span class="sort">답글수</span></td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
                 <tr>
-                  <td class="tac w10">요양시설의 종류</td>
-                  <td class="table-title">요양시설의 종류에 대해서</td>
-                  <td class="tac w8">1534</td>
-                  <td class="tac w10">요양병원 관리자</td>
-                  <td class="tac w8">2020-09-24</td>
+                  <td class="tac">
+                    의료법인 미소들의료재단 미소들노인전문병원
+                  </td>
+                  <td class="tac">B</td>
+                  <td class="tac w8">282 / 352</td>
+                  <td class="tac w10">1584</td>
+                  <td class="tac w8">4.8</td>
+                  <td class="tac w8">5</td>
+                  <td class="tac w8">5</td>
                 </tr>
               </tbody>
             </table>
@@ -193,7 +248,7 @@
             </div>
             <!-- 본문페이지로 들어가기 위한 임시 링크 -->
             <div class="temp">
-              <a href="guide_detail.html">본문 보기 임시버튼</a>
+              <a href="care_detail.html">시설 보기 임시버튼</a>
             </div>
           </div>
         </div>

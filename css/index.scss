@@ -80,6 +80,16 @@ select {
   padding: 0.25rem 2rem 0.25rem 0.25rem;
   height: 2.5rem;
   font-size: 1rem;
+  border: 1px solid $gray;
+  font-family: inherit;
+
+  &:focus {
+    border-color: $main;
+  }
+
+  &.ml {
+    margin-left: 0.75rem;
+  }
 }
 
 // ul과 li스타일 제거
@@ -131,7 +141,7 @@ button {
   }
 
   &.ml {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
 
   &:hover {
@@ -439,11 +449,19 @@ h1 {
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
-    max-height: calc(100vh - 16.5rem);
+    min-height: calc(100vh - 25rem);
+    max-height: calc(100vh - 16rem);
     overflow: hidden;
+    overflow-y: auto;
 
     &.box__height {
       max-height: calc(100vh - 7rem);
+      overflow-y: auto;
+    }
+
+    &.free-height {
+      max-height: initial;
+      overflow-y: auto;
     }
   }
 }
@@ -460,9 +478,18 @@ h1 {
   padding: 1.5rem 2rem;
   margin-top: 1rem;
 
+  .util__search {
+    display: flex;
+    align-items: flex-end;
+  }
+
   .input-box {
     &.ml {
       margin-left: 1.5rem;
+    }
+
+    &.ml-2 {
+      margin-left: 4rem;
     }
 
     .input-div {
@@ -474,6 +501,11 @@ h1 {
       font-size: 0.9rem;
       font-weight: 500;
       margin-bottom: 0.25rem;
+    }
+
+    .util__text {
+      font-size: 1.7rem;
+      font-weight: 300;
     }
   }
 }
@@ -491,6 +523,23 @@ table {
 
     td {
       padding: 1rem;
+
+      .sort {
+        cursor: pointer;
+        position: relative;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          background: url("../img/sort.svg") center no-repeat;
+          top: 0.28rem;
+          right: -1.3rem;
+          opacity: 0.6;
+        }
+      }
     }
   }
 
@@ -520,7 +569,19 @@ table {
     }
 
     .table-title {
-      padding-left: 3rem;
+      padding-left: 2rem;
+
+      p {
+        overflow: hidden;
+        width: 45vw;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &.wide {
+          width: 60vw;
+        }
+      }
     }
 
     .tac {

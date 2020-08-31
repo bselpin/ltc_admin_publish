@@ -1,0 +1,51 @@
+@import "Variables.scss";
+
+.care-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+
+  h4 {
+    font-weight: 500;
+  }
+
+  .flex-box {
+    width: 50%;
+    min-height: 22.5rem;
+
+    &.pl {
+      padding-left: 1rem;
+    }
+
+    &.pt {
+      padding-top: 0.75rem;
+    }
+
+    &.bt {
+      border-top: 1px solid $gray4;
+    }
+
+    &.bl {
+      border-left: 1px solid $gray4;
+    }
+
+    .inner-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-top: -2rem;
+
+      p {
+        margin-bottom: 1rem;
+        font-weight: 300;
+      }
+
+      button {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}

@@ -506,6 +506,14 @@ h1 {
     .util__text {
       font-size: 1.7rem;
       font-weight: 300;
+
+      &.is {
+        color: $green;
+      }
+
+      &.none {
+        color: $gray;
+      }
     }
   }
 }

@@ -249,3 +249,61 @@
     }
   }
 }
+
+.review-box {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 20rem;
+
+  .review-header {
+    display: flex;
+    width: 100%;
+
+    .star-box {
+      width: 35%;
+      text-align: center;
+
+      .star-point {
+        font-size: 5rem;
+      }
+    }
+
+    .point-gauge {
+      width: 65%;
+      padding: 0 12rem;
+      padding-left: 7rem;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+
+          .gauge-background {
+            position: relative;
+            width: 0.5rem;
+            height: 6rem;
+            background: $gray4;
+            margin: 0.5rem auto;
+            border-radius: 1rem;
+          }
+
+          .gauge {
+            position: absolute;
+            width: 0.5rem;
+            height: auto;
+            left: 0;
+            bottom: 0;
+            border-radius: 1rem;
+            background: $main;
+          }
+        }
+      }
+    }
+  }
+}

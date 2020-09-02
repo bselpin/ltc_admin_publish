@@ -43,6 +43,7 @@ html {
 
 h4 {
   font-weight: 500;
+  font-size: 1.15rem;
 }
 
 a {
@@ -251,7 +252,7 @@ textarea {
   font-family: inherit;
   font-weight: 300;
   border-color: $gray;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
 
   &:focus {
     border-color: $main;
@@ -530,7 +531,7 @@ h1 {
     border-radius: 0.5rem;
     box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
     min-height: calc(100vh - 25rem);
-    max-height: calc(100vh - 16rem);
+    max-height: calc(100vh - 15.5rem);
     overflow: hidden;
     overflow-y: auto;
     position: relative;

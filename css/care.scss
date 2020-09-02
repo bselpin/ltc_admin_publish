@@ -41,8 +41,176 @@
       }
 
       button {
-        margin: 0.5rem 0;
+        margin: 0.5rem 0.5rem;
       }
     }
+  }
+}
+
+.care-box {
+  height: calc(100vh - 22.5rem);
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 2rem 0 6rem;
+}
+
+.pic-file-container {
+  width: 80%;
+  padding: 3rem 2rem 3rem 7rem;
+  display: flex;
+  margin: 4rem auto;
+  border-bottom: 1px solid $dark2;
+  position: relative;
+
+  &:last-child {
+    border: none;
+  }
+
+  .picture {
+    position: relative;
+    width: 35rem;
+    height: 17rem;
+    border-radius: 0.75rem;
+
+    &.thumb {
+      width: 8rem;
+      height: 4.8rem;
+    }
+
+    .del-btn {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: $red;
+      top: 50%;
+      right: -2.25rem;
+      transform: translateY(-40%);
+      border-radius: 5rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 1.5px;
+        height: 1rem;
+        background: $white;
+        position: absolute;
+        transform: rotate(45deg);
+        top: 0.25rem;
+        left: 0.7rem;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 1.5px;
+        height: 1rem;
+        background: $white;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 0.25rem;
+        left: 0.7rem;
+      }
+    }
+  }
+
+  .pic-num {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: 200;
+    top: 2rem;
+    left: 2rem;
+    color: $main;
+  }
+
+  .order-btns {
+    position: absolute;
+    height: 12rem;
+    top: 8rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .order-btn {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 5rem;
+      background: $gray4;
+      cursor: pointer;
+      position: relative;
+      opacity: 0.85;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 0.85rem;
+        height: 0.85rem;
+        border: 4px solid $gray;
+        border-radius: 0.2rem;
+        border-left: none;
+        border-bottom: none;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0.9rem;
+        left: 0.7rem;
+      }
+
+      &.down:after {
+        transform: rotate(135deg);
+        position: absolute;
+        top: 0.55rem;
+        left: 0.7rem;
+      }
+
+      &:hover {
+        &:after {
+          border-color: $main;
+        }
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  .pic-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    align-items: center;
+
+    text-align: center;
+
+    &.ml {
+      margin-left: 5rem;
+    }
+
+    label {
+      margin-top: 2.25rem;
+    }
+
+    .panorama-img {
+      width: 35rem;
+      border-radius: 0.75rem;
+    }
+
+    .thumb-img {
+      width: 8rem;
+      border-radius: 0.75rem;
+    }
+  }
+
+  .apply-btn {
+    margin-top: 7rem;
+    margin-left: 9rem;
   }
 }

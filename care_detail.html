@@ -100,6 +100,11 @@
               <h4>병원 특징 콘텐츠</h4>
               <div class="inner-flex">
                 <p>콘텐츠가 등록되어 있지 않습니다</p>
+                <!-- 콘텐츠가 있을경우에만 표시 -->
+                <p class="view content-view">미리보기</p>
+
+                <!-- 콘텐츠가 없을경우 : 등록만
+                콘텐츠가 있을경우 : 미리보기, 수정, 삭제 -->
                 <div class="btns">
                   <button>
                     <a href="care_contents.html" class="sub">등록</a>
@@ -117,6 +122,11 @@
               <h4>인터뷰</h4>
               <div class="inner-flex">
                 <p>인터뷰가 등록되어 있지 않습니다</p>
+                <!-- 콘텐츠가 있을경우에만 표시 -->
+                <p class="view interview-view">미리보기</p>
+
+                <!-- 콘텐츠가 없을경우 : 등록만
+                콘텐츠가 있을경우 : 미리보기, 수정, 삭제 -->
                 <div class="btns">
                   <button>
                     <a href="care_interview.html" class="sub">등록</a>
@@ -155,5 +165,33 @@
       </div>
       <!-- content 표시 영역 end -->
     </div>
+
+    <!-- 병원 특징 콘텐츠 미리보기 모달 -->
+    <div class="view-wrap content-view-wrap">
+      <!-- 추후 컨텐츠 실제 등록시에 추가 개발 -->
+      <img src="resources/img/content_view.jpg" alt="" class="view-box" />
+      <div class="close-btn"></div>
+    </div>
+
+    <!-- 인터뷰 미리보기 모달 -->
+    <div class="view-wrap interview-view-wrap active">
+      <!-- 추후 컨텐츠 실제 등록시에 추가 개발 -->
+      <img src="resources/img/interview_view.jpg" alt="" class="view-box" />
+      <div class="close-btn"></div>
+    </div>
+
+    <script>
+      $(".content-view").click(function () {
+        $(".content-view-wrap").addClass("active");
+      });
+
+      $(".interview-view").click(function () {
+        $(".interview-view-wrap").addClass("active");
+      });
+
+      $(".close-btn").click(function () {
+        $(".view-wrap").removeClass("active");
+      });
+    </script>
   </body>
 </html>

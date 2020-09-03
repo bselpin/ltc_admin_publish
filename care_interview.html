@@ -107,11 +107,23 @@
                 <input type="file" accept="image/*" />
               </label>
             </div>
-            <textarea
-              cols="30"
-              rows="24"
-              placeholder="텍스트 에디터 영역, 개발시에 텍스트 에디터 기능으로 textarea 대체"
-            ></textarea>
+            <div class="input-area">
+              <p class="label">병원장 이름 <span>(직함 포함)</span></p>
+              <input type="text" />
+              <p class="label">대표 인사말 <span>(30자 내외)</span></p>
+              <textarea
+                cols="30"
+                rows="3"
+                placeholder="텍스트에디터 미사용 영역"
+              ></textarea>
+              <p class="label">본문</p>
+              <textarea
+                cols="30"
+                rows="13"
+                placeholder="텍스트에디터 미사용 영역"
+                class="mb"
+              ></textarea>
+            </div>
           </div>
 
           <button class="wide">

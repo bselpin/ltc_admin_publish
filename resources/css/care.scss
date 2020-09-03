@@ -252,13 +252,32 @@
 
 .review-box {
   width: 100%;
-  display: flex;
   margin: 0 auto;
   padding: 0 20rem;
+
+  .star {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../img/star.png");
+    background-size: cover;
+    background-position: 4rem 0;
+
+    &.full {
+      background-position: 0rem 0;
+    }
+
+    &.half {
+      background-position: 2rem 0;
+    }
+  }
 
   .review-header {
     display: flex;
     width: 100%;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
 
     .star-box {
       width: 35%;
@@ -304,6 +323,54 @@
           }
         }
       }
+    }
+  }
+
+  .review-body {
+    padding: 2rem 1rem;
+
+    .user-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+
+    .image-wrap {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .user-info {
+      margin-left: 1rem;
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        &.date {
+          font-size: 1rem;
+          color: $dark2;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .user-image {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-text {
+      font-size: 1.15rem;
+      font-weight: 300;
+      margin-top: 1.5rem;
+      line-height: 2;
+      padding-right: 6rem;
     }
   }
 }

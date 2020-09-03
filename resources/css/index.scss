@@ -27,6 +27,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
+  word-break: keep-all;
 }
 
 // html 기본
@@ -530,7 +531,7 @@ h1 {
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
-    min-height: calc(100vh - 25rem);
+    min-height: calc(100vh - 20rem);
     max-height: calc(100vh - 15.5rem);
     overflow: hidden;
     overflow-y: auto;
@@ -541,13 +542,8 @@ h1 {
       overflow-y: auto;
     }
 
-    &.free-height {
-      max-height: initial;
-      overflow-y: auto;
-    }
-
     h4 {
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
   }
 }

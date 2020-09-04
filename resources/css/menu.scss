@@ -3,5 +3,63 @@
 .menu-box {
   display: flex;
   width: 100%;
-  padding: 2rem 15rem;
+  padding: 6rem 15rem;
+  justify-content: space-between;
+
+  .tree-box {
+    width: 39%;
+
+    .tree {
+      margin-top: 0.5rem;
+      padding: 1.5rem;
+      border: 1px solid $gray;
+      height: 30rem;
+      overflow-y: auto;
+
+      li {
+        margin: 0.5rem 0;
+
+        ul {
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.15s;
+        }
+
+        li {
+          margin-left: 1.5rem;
+        }
+      }
+
+      p {
+        cursor: pointer;
+        margin-left: 2rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        user-select: none;
+
+        &:hover {
+          font-weight: 500;
+          opacity: 0.75;
+        }
+      }
+
+      .top-tree {
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+
+  .edit-box {
+    width: 59%;
+
+    .edit {
+      margin-top: 0.5rem;
+      padding: 1.5rem;
+      border: 1px solid $gray;
+      height: 30rem;
+      overflow-y: auto;
+    }
+  }
 }

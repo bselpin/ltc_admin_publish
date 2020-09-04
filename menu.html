@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>또가 - 관리자 페이지</title>
-    <link rel="stylesheet" href="/resources/css/index.min.css" />
-    <link rel="stylesheet" href="/resources/css/guide.min.css" />
-    <link rel="stylesheet" href="/resources/css/qna.min.css" />
-    <link rel="stylesheet" href="/resources/css/user.min.css" />
-    <link rel="stylesheet" href="/resources/css/care.min.css" />
-    <link rel="stylesheet" href="/resources/css/menu.min.css" />
-    <link rel="stylesheet" href="/resources/css/auth.min.css" />
+    <link rel="stylesheet" href="resources/css/index.min.css" />
+    <link rel="stylesheet" href="resources/css/guide.min.css" />
+    <link rel="stylesheet" href="resources/css/qna.min.css" />
+    <link rel="stylesheet" href="resources/css/user.min.css" />
+    <link rel="stylesheet" href="resources/css/care.min.css" />
+    <link rel="stylesheet" href="resources/css/menu.min.css" />
+    <link rel="stylesheet" href="resources/css/auth.min.css" />
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -23,7 +23,7 @@
       <!-- 좌측 고정 menu, index 제외한 전 페이지 공통 -->
       <div class="main-menu">
         <h1 class="main-logo">
-          <a href="index.html"><img src="/resources/img/logo.png" alt="" /></a>
+          <a href="index.html"><img src="resources/img/logo.png" alt="" /></a>
         </h1>
         <div class="menu-wrap">
           <ul>
@@ -54,16 +54,70 @@
       <div class="content-wrap">
         <h1 class="content-title">메뉴관리</h1>
 
-        <!-- util-box 표시 영역 -->
-        <div class="util-box"></div>
-
         <!-- content 표시 영역 -->
-        <div class="content-box">
+        <div class="content-box box__height">
           <h4>메뉴관리</h4>
-          <div class="menu-box"></div>
+          <div class="menu-box">
+            <div class="tree-box">
+              <p>메뉴</p>
+              <ul class="tree">
+                <li>
+                  <p>요양시설 가이드</p>
+                </li>
+                <li>
+                  <p>Q&A 관리</p>
+                </li>
+                <li>
+                  <p>요양시설 조회관리</p>
+                </li>
+                <li>
+                  <p>회원관리</p>
+                </li>
+                <!-- 2뎁스일 경우의 html스타일 -->
+                <li>
+                  <p class="top-tree" onclick="toggleTree(this)">메뉴관리</p>
+                  <ul>
+                    <li>
+                      <p>임시메뉴1</p>
+                    </li>
+                    <li>
+                      <p>임시메뉴2</p>
+                    </li>
+                    <li>
+                      <p>임시메뉴3</p>
+                    </li>
+                  </ul>
+                </li>
+                <!-- 2뎁스일 경우의 html스타일 -->
+                <li>
+                  <p class="top-tree" onclick="toggleTree(this)">권한관리</p>
+                  <ul>
+                    <li><p class="sub-tree">임시메뉴1</p></li>
+                    <li><p class="sub-tree">임시메뉴2</p></li>
+                    <li><p class="sub-tree">임시메뉴3</p></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="edit-box">
+              <p>편집</p>
+              <div class="edit"></div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- content 표시 영역 end -->
     </div>
+
+    <script>
+      function toggleTree(e) {
+        var tree = e.nextElementSibling;
+        if (tree.style.maxHeight) {
+          tree.style.maxHeight = null;
+        } else {
+          tree.style.maxHeight = tree.scrollHeight + "px";
+        }
+      }
+    </script>
   </body>
 </html>

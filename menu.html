@@ -78,13 +78,13 @@
                   <p class="top-tree" onclick="toggleTree(this)">메뉴관리</p>
                   <ul>
                     <li>
-                      <p>임시메뉴1</p>
+                      <p class="sub-tree">임시메뉴1</p>
                     </li>
                     <li>
-                      <p>임시메뉴2</p>
+                      <p class="sub-tree">임시메뉴2</p>
                     </li>
                     <li>
-                      <p>임시메뉴3</p>
+                      <p class="sub-tree">임시메뉴3</p>
                     </li>
                   </ul>
                 </li>
@@ -101,7 +101,31 @@
             </div>
             <div class="edit-box">
               <p>편집</p>
-              <div class="edit"></div>
+              <div class="edit">
+                <div class="input-box">
+                  <label for="">메뉴 이름</label>
+                  <input type="text" value="" />
+                </div>
+                <div class="input-box mt">
+                  <label for="">상위 카테고리</label>
+                  <select>
+                    <option value="0">- 없음 -</option>
+                    <option value="1">요양시설 가이드</option>
+                    <option value="2">Q&A 관리</option>
+                    <option value="3">요양시설 조회관리</option>
+                    <option value="4">회원관리</option>
+                    <option value="5">메뉴관리</option>
+                    <option value="6">권한관리</option>
+                  </select>
+                </div>
+                <div class="input-box mt">
+                  <label for="">권한 레벨</label>
+                  <select>
+                    <option value="0">일반 권한</option>
+                    <option value="1">관리자 권한</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         </div>

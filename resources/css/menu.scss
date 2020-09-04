@@ -11,13 +11,14 @@
 
     .tree {
       margin-top: 0.5rem;
-      padding: 1.5rem;
+      padding: 1rem 1.5rem 7rem;
       border: 1px solid $gray;
-      height: 30rem;
+      height: 35rem;
       overflow-y: auto;
 
       li {
-        margin: 0.5rem 0;
+        margin: 0.75rem 0;
+        position: relative;
 
         ul {
           max-height: 0;
@@ -27,25 +28,53 @@
 
         li {
           margin-left: 1.5rem;
+          position: relative;
         }
       }
 
       p {
         cursor: pointer;
-        margin-left: 2rem;
+        margin-left: 2.25rem;
         font-size: 1.2rem;
         font-weight: 300;
         user-select: none;
+        opacity: 0.85;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+          position: absolute;
+          background-image: url("../img/depth.png");
+          background-repeat: no-repeat;
+          background-position: left 0;
+          background-size: 3rem;
+          overflow: hidden;
+          left: 0rem;
+          top: 0.25rem;
+        }
+
+        &.sub-tree {
+          &:after {
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            background-image: url("../img/depth.png");
+            background-repeat: no-repeat;
+            background-position: -1.5rem 0;
+            background-size: 3rem;
+            overflow: hidden;
+            left: 0rem;
+            top: 0.25rem;
+          }
+        }
 
         &:hover {
           font-weight: 500;
-          opacity: 0.75;
-        }
-      }
-
-      .top-tree {
-        &:after {
-          content: "";
+          opacity: 1;
         }
       }
     }
@@ -58,8 +87,29 @@
       margin-top: 0.5rem;
       padding: 1.5rem;
       border: 1px solid $gray;
-      height: 30rem;
+      height: 35rem;
       overflow-y: auto;
+
+      label {
+        display: block;
+        font-size: 0.9rem;
+        color: $dark;
+      }
+
+      input {
+        margin-top: 0.5rem;
+        width: 80%;
+      }
+
+      select {
+        width: 80%;
+        display: block;
+        margin-top: 0.5rem;
+      }
+
+      .mt {
+        margin-top: 1.5rem;
+      }
     }
   }
 }

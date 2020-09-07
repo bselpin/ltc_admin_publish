@@ -353,85 +353,86 @@
       }
     }
   }
+}
 
-  .review-body {
-    padding: 2rem 2rem;
-    background: $gray3;
-    margin: 2rem 0;
-    border-radius: 1rem;
+.review-body {
+  padding: 2rem 2rem;
+  background: $gray3;
+  margin: 2rem 0;
+  border-radius: 1rem;
 
-    &.hide {
-      .user-info,
-      .image-wrap,
-      .user-text,
-      .reported {
-        opacity: 0.3;
-      }
+  &.hide {
+    .user-info,
+    .image-wrap,
+    .user-text,
+    .reported {
+      opacity: 0.3;
     }
+  }
+}
 
-    .user-header {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      align-items: center;
+.user-text {
+  font-size: 1.15rem;
+  font-weight: 300;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 2;
+  padding-right: 6rem;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.user-image {
+  display: flex;
+  align-items: center;
+}
+
+.user-review {
+  &.reply {
+    width: 90%;
+    margin-left: auto;
+    margin-top: 3rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border-left: 1px solid $dark;
+      border-bottom: 1px solid $dark;
+      left: -4rem;
+      top: 2rem;
     }
+  }
+}
 
-    .user-review {
-      &.reply {
-        width: 90%;
-        margin-left: auto;
-        margin-top: 3rem;
-        position: relative;
+.image-wrap {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
 
-        &:before {
-          content: "";
-          display: block;
-          position: absolute;
-          width: 1rem;
-          height: 1rem;
-          border-left: 1px solid $dark;
-          border-bottom: 1px solid $dark;
-          left: -4rem;
-          top: 2rem;
-        }
-      }
-    }
+  img {
+    width: 100%;
+  }
+}
 
-    .image-wrap {
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .user-info {
-      margin-left: 1rem;
-      p {
-        font-size: 1.2rem;
-        font-weight: 500;
-        &.date {
-          font-size: 1rem;
-          color: $dark2;
-          font-weight: 400;
-        }
-      }
-    }
-
-    .user-image {
-      display: flex;
-      align-items: center;
-    }
-
-    .user-text {
-      font-size: 1.15rem;
-      font-weight: 300;
-      margin-top: 1.5rem;
-      line-height: 2;
-      padding-right: 6rem;
+.user-info {
+  margin-left: 1rem;
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    &.date {
+      font-size: 1rem;
+      color: $dark2;
+      font-weight: 400;
     }
   }
 }

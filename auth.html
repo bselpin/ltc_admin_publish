@@ -58,23 +58,114 @@
         <div class="util-box">
           <div class="util__search">
             <div class="input-box">
-              <p class="util__label">이메일 / 닉네임</p>
+              <p class="util__label">아이디 검색</p>
               <div class="input-div">
                 <input
                   type="text"
                   class="search-input"
-                  placeholder="이메일 및 닉네임 검색어"
+                  placeholder="아이디 검색"
                 />
                 <button class="btn search-btn"></button>
               </div>
             </div>
+
+            <!-- 검색이후 아이디를 util__text에 바인딩 -->
+            <div class="input-box ml-2">
+              <p class="util__label">아이디</p>
+              <p class="util__text">-</p>
+            </div>
+          </div>
+
+          <div class="util-btn__box">
+            <!-- 계정 관리를 눌렀을 경우 현재 검색된 유저의 정보를 right-wrap의 인풋에 바인딩 -->
+            <button class="btn sub-btn mr _temp-right">계정 관리</a></button>
+            <button class="btn _temp-right">계정 등록</a></button>
           </div>
         </div>
 
         <!-- content 표시 영역 -->
-        <div class="content-box">권한관리 정의 이후 개발</div>
+        <div class="content-box">
+          <h4>메뉴 권한 관리</h4>
+
+          <!-- util에서 검색한 유저 정보에 따라서 동적으로 체크박스 바인딩 -->
+          <div class="auth-box">
+            <div class="table-box">
+              <table>
+                <thead>
+                  <tr>
+                    <!-- 선택시에 tbody의 체크박스 전체 토글 -->
+                    <td class="w5"><input type="checkbox">
+                    </td>
+                    <td>메뉴 이름</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tac"><input type="checkbox"></td>
+                    <td class="tac">요양시설 가이드</td>
+                  </tr>
+                  <tr>
+                    <td class="tac"><input type="checkbox"></td>
+                    <td class="tac">Q&A 관리</td>
+                  </tr>
+                  <tr>
+                    <td class="tac"><input type="checkbox"></td>
+                    <td class="tac">요양시설 조회관리</td>
+                  </tr>
+                  <tr>
+                    <td class="tac"><input type="checkbox"></td>
+                    <td class="tac">회원관리</td>
+                  </tr>
+                  <tr>
+                    <td class="tac"><input type="checkbox"></td>
+                    <td class="tac">메뉴관리</td>
+                  </tr>
+                  <tr>
+                    <td class="tac"><input type="checkbox"></td>
+                    <td class="tac">권한관리</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="btn-box">
+                <button class="btn sub-btn mt">저장</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
       </div>
       <!-- content 표시 영역 end -->
     </div>
+
+    <!-- 계정 관리 및 등록시에 나타나는 우측 패널 -->
+    <div class="right-wrap">
+      <h2>계정 관리</h2>
+      <div class="input-box">
+        <label>아이디</label>
+        <input type="text">
+      </div>
+
+      <div class="input-box">
+        <label>비밀번호</label>
+        <input type="password">
+      </div>
+
+      <div class="input-box">
+        <label>권한 레벨</label>
+        <select>
+          <option value="0">일반 권한</option>
+          <option value="1">관리자 권한</option>
+        </select>
+      </div>
+      <!--등록일 경우는 등록 , 관리일 경우는 수정으로 텍스트 변경 -->
+      <button class="btn mt _temp-right">등록</button>
+      <p class="close-btn _temp-right"></p>
+    </div>
+
+    <script>
+      $("._temp-right").click(function() {
+        $(".right-wrap").toggleClass("active")
+      })
+    </script>
   </body>
 </html>

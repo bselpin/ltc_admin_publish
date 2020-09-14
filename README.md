@@ -38,6 +38,12 @@ user_detail_q : 회원관리 > 질문
 
 user_detail_r : 회원관리 > 리뷰
 
+util_loading : 로딩창 화면 공용 페이지, api요청시에 사용
+
+util_message : 피드백을 주는 메시징 공용 페이지, api요청 완료 후 사용
+
+util_popup : 팝업 스타일 공용 페이지
+
 ## 특이사항
 
 - 스타일링 변경이 필요할 경우 active 클래스를 토글하는 식으로 작동됨.

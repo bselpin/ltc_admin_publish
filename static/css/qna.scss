@@ -87,19 +87,19 @@
       opacity: 0.6;
     }
   }
+}
 
-  .write-reply {
-    display: none;
-    margin-top: 1rem;
+.write-reply {
+  display: none;
+  margin-top: 1rem;
 
-    &.active {
-      display: block;
-    }
+  &.active {
+    display: block;
+  }
 
-    .label {
-      font-size: 1rem;
-      font-weight: 500;
-    }
+  .label {
+    font-size: 1rem;
+    font-weight: 500;
   }
 }
 

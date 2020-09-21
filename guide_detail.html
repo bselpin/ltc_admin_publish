@@ -193,8 +193,16 @@
                 </div>
               </div>
             </div>
+            <div class="reply-box">
+              <div class="write-reply">
+                <p class="label">답변 등록</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button class="btn wide _temp-regist">답변 등록하기</button>
+              </div>
+            </div>
           </div>
-          <div class="reply-box"></div>
+
+          <button class="btn mr _temp-open-regist">답변 달기</button>
           <button>
             <a href="guide.html" class="sub">목록으로</a>
           </button>
@@ -225,6 +233,20 @@
 
       $("._temp-close-popup").click(function () {
         $(".popup-wrap").removeClass("active");
+      });
+
+      // 답변 달기 버튼시 textarea 보여짐
+      $("._temp-open-regist").click(function () {
+        $(".more").addClass("hide");
+        $(".write-reply").addClass("active");
+        // 답변 달기버튼을 눌렀을때 스크롤을 최 하단으로 내리는 부분
+        $(".detail-body").animate({ scrollTop: $(document).height() }, 200);
+      });
+
+      // 답변 등록시 원상복구
+      $("._temp-regist").click(function () {
+        $(".more").removeClass("hide");
+        $(".write-reply").removeClass("active");
       });
     </script>
   </body>

@@ -15,7 +15,36 @@
 }
 
 .edit-box {
-  width: 100%;
+  width: 68%;
+}
+
+.summary-box {
+  margin-left: 2rem;
+  width: calc(32% - 2rem);
+
+  .label {
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+
+  .img-wrap {
+    width: 100%;
+    min-height: 13rem;
+    border: 1px solid $gray;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
 
 // 본문 디테일 페이지 헤더

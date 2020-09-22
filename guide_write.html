@@ -79,7 +79,7 @@
             <button class="btn sub-btn">임시저장</button>
           </div>
         </div>
-        <div class="content-box jcc">
+        <div class="content-box flex">
           <div class="edit-box">
             <label for=""></label>
             <input
@@ -94,6 +94,27 @@
               placeholder="텍스트 에디터 영역, 개발시에 텍스트 에디터 기능으로 textarea 대체"
             ></textarea>
           </div>
+
+          <!-- 요약 및 썸네일 추가 부분 -->
+          <div class="summary-box">
+            <p class="label">요약본 입력 (60자 내외)</p>
+            <textarea
+              id="summary"
+              rows="7"
+              placeholder="요약본 텍스트를 입력해 주세요"
+              required
+            ></textarea>
+            <p class="label">썸네일 등록 (최소 400*300 SIZE)</p>
+            <div class="img-wrap">
+              <!-- 썸네일을 보여주는 태그, src에 바인딩 -->
+              <img src="" alt="" />
+            </div>
+            <label for="thumb" class="btn sub-btn"
+              >썸네일 찾기
+              <input type="file" name="" id="thumb" accept="image/*" />
+            </label>
+          </div>
+
           <button class="wide">
             <a href="guide.html" class="wide">콘텐츠 작성</a>
           </button>

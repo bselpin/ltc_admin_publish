@@ -770,6 +770,11 @@ table {
   align-items: center;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 // 임시 엘레먼트 스타일
 .temp {
   color: $main;

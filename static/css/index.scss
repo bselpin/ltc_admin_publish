@@ -6,1030 +6,1055 @@
 
 // 스크롤바 스타일 변경 (ie 미지원)
 ::-webkit-scrollbar {
-  width: 0.4rem;
+	width: 0.4rem;
 }
 
 ::-webkit-scrollbar:horizontal {
-  height: 0.4rem;
+	height: 0.4rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: #e1e1ef;
+	background: #e1e1ef;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $main;
+	background: $main;
 }
 
 // 스타일 초기화
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
-  word-break: keep-all;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Noto Sans KR", sans-serif;
+	word-break: keep-all;
 }
 
 // html 기본
 html {
-  font-size: 16px;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  color: $black;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: auto;
+	font-size: 16px;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	color: $black;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: auto;
 }
 
 h4 {
-  font-weight: 500;
-  font-size: 1.15rem;
+	font-weight: 500;
+	font-size: 1.15rem;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 // input 스타일 기본 정의
 input {
-  border: 1px solid $gray;
-  outline: none;
-  background: $white;
-  padding: 0.5rem;
-  height: 2.5rem;
-  font-size: 1rem;
-  font-weight: 300;
+	border: 1px solid $gray;
+	outline: none;
+	background: $white;
+	padding: 0.5rem;
+	height: 2.5rem;
+	font-size: 1rem;
+	font-weight: 300;
 
-  &.full {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
+	&.full {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
 
-  &:focus {
-    border-color: $main;
-  }
+	&:focus {
+		border-color: $main;
+	}
 
-  &::placeholder {
-    color: $gray;
-  }
+	&::placeholder {
+		color: $gray;
+	}
 }
 
 input[type="file"] {
-  display: none;
+	display: none;
 }
 
 label {
-  span {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.75rem;
-    border-radius: 0.5rem;
-    border: 1px solid $main;
-    color: $main;
-    cursor: pointer;
+	span {
+		font-size: 0.9rem;
+		padding: 0.3rem 0.75rem;
+		border-radius: 0.5rem;
+		border: 1px solid $main;
+		color: $main;
+		cursor: pointer;
 
-    &:hover {
-      opacity: 0.6;
-    }
-  }
+		&:hover {
+			opacity: 0.6;
+		}
+	}
 }
 
 // 검색인풋창 스타일
 .search-input {
-  width: 20rem;
+	width: 20rem;
 }
 
 // select 스타일 기본 정의
 select {
-  padding: 0.25rem 2rem 0.25rem 0.25rem;
-  height: 2.5rem;
-  font-size: 1rem;
-  border: 1px solid $gray;
-  font-family: inherit;
+	padding: 0.25rem 2rem 0.25rem 0.25rem;
+	height: 2.5rem;
+	font-size: 1rem;
+	border: 1px solid $gray;
+	font-family: inherit;
 
-  &:focus {
-    border-color: $main;
-  }
+	&:focus {
+		border-color: $main;
+	}
 
-  &.ml {
-    margin-left: 0.75rem;
-  }
+	&.ml {
+		margin-left: 0.75rem;
+	}
 }
 
 // ul과 li스타일 제거
 ul,
 li {
-  list-style: none;
+	list-style: none;
 }
 
 // button 스타일 기본 정의
 
 .login {
-  width: 100%;
-  font-size: 1.25rem;
-  height: auto;
+	width: 100%;
+	font-size: 1.25rem;
+	height: auto;
 }
 
 @mixin button {
-  background: $main;
-  transition: all 0.3s $easing;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  color: $white;
-  font-weight: 500;
-  height: 2.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  border: 1px solid $main;
+	background: $main;
+	transition: all 0.3s $easing;
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
+	color: $white;
+	font-weight: 500;
+	height: 2.5rem;
+	cursor: pointer;
+	font-size: 1rem;
+	border: 1px solid $main;
 }
 
 button {
-  border: none;
-  outline: none;
-  background: #fff;
+	border: none;
+	outline: none;
+	background: #fff;
 
-  &.wide {
-    width: 100%;
-  }
+	&.wide {
+		width: 100%;
+	}
 
-  &:disabled {
-    cursor: default;
-    background: $gray4 !important;
-    color: $gray !important;
-    border-color: $gray !important;
+	&:disabled {
+		cursor: default;
+		background: $gray4 !important;
+		color: $gray !important;
+		border-color: $gray !important;
 
-    &:hover {
-      opacity: 1;
-    }
-  }
+		&:hover {
+			opacity: 1;
+		}
+	}
 
-  a {
-    @include button;
-    display: block;
+	a {
+		@include button;
+		display: block;
 
-    &.login {
-      width: 100%;
-    }
+		&.login {
+			width: 100%;
+		}
 
-    &.sub {
-      background: $white;
-      border: 1px solid $main;
-      color: $main;
-    }
+		&.sub {
+			background: $white;
+			border: 1px solid $main;
+			color: $main;
+		}
 
-    &.wide {
-      width: 100%;
-      padding: 0.75rem;
-      height: auto;
-      font-size: 1.25rem;
-    }
+		&.wide {
+			width: 100%;
+			padding: 0.75rem;
+			height: auto;
+			font-size: 1.25rem;
+		}
 
-    &:hover {
-      opacity: 0.7;
-    }
-  }
+		&:hover {
+			opacity: 0.7;
+		}
+	}
 }
 
 .btn {
-  @include button;
+	@include button;
 
-  &.pri-btn {
-    margin-left: 0.75rem;
-  }
+	&.pri-btn {
+		margin-left: 0.75rem;
+	}
 
-  &.wide {
-    width: 100%;
-    padding: 0.75rem;
-    height: auto;
-    font-size: 1.25rem;
-  }
+	&.wide {
+		width: 100%;
+		padding: 0.75rem;
+		height: auto;
+		font-size: 1.25rem;
+	}
 
-  &.sub-btn {
-    background: $white;
-    border: 1px solid $main;
-    color: $main;
-  }
+	&.sub-btn {
+		background: $white;
+		border: 1px solid $main;
+		color: $main;
+	}
 
-  &.del-btn {
-    background: $red;
-    color: $white;
-    border-color: $red;
-  }
+	&.del-btn {
+		background: $red;
+		color: $white;
+		border-color: $red;
+	}
 
-  &.mr {
-    margin-right: 0.75rem;
-  }
+	&.mr {
+		margin-right: 0.75rem;
+	}
 
-  &.ml {
-    margin-left: 0.75rem;
-  }
+	&.ml {
+		margin-left: 0.75rem;
+	}
 
-  &:hover {
-    opacity: 0.8;
-  }
+	&:hover {
+		opacity: 0.8;
+	}
 
-  &:active {
-    opacity: 0.5;
-  }
+	&:active {
+		opacity: 0.5;
+	}
 
-  &.search-btn {
-    display: inline-block;
-    border-radius: 0;
-    background-image: url("../img/search.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 2rem;
-    width: 2.5rem;
-  }
+	&.search-btn {
+		display: inline-block;
+		border-radius: 0;
+		background-image: url("../img/search.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 2rem;
+		width: 2.5rem;
+	}
 }
 
 // textarea 기본 스타일 정의
 textarea {
-  width: 100%;
-  resize: none;
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-family: inherit;
-  font-weight: 300;
-  border-color: $gray;
-  margin-bottom: 1.75rem;
+	width: 100%;
+	resize: none;
+	padding: 0.5rem;
+	font-size: 1rem;
+	font-family: inherit;
+	font-weight: 300;
+	border-color: $gray;
+	margin-bottom: 1.75rem;
 
-  &:focus {
-    border-color: $main;
-    outline: none;
-  }
+	&:focus {
+		border-color: $main;
+		outline: none;
+	}
 
-  &::placeholder {
-    color: $gray;
-  }
+	&::placeholder {
+		color: $gray;
+	}
 }
 
 h1 {
-  span {
-    font-weight: 300;
-  }
+	span {
+		font-weight: 300;
+	}
 
-  .back-btn {
-    background: url("../img/back.svg") 0 center no-repeat;
-    display: inline-block;
-    width: 3rem;
-    height: 2rem;
-  }
+	.back-btn {
+		background: url("../img/back.svg") 0 center no-repeat;
+		display: inline-block;
+		width: 3rem;
+		height: 2rem;
+	}
 }
 
 // 로그인 관련 스타일링
 .login-box {
-  width: 70rem;
-  height: 45rem;
-  background: $white;
-  display: flex;
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
+	width: 70rem;
+	height: 45rem;
+	background: $white;
+	display: flex;
+	border-radius: 0.5rem;
+	box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
 
-  .login-box__boxes {
-    width: 50%;
-    height: 45rem;
-  }
+	.login-box__boxes {
+		width: 50%;
+		height: 45rem;
+	}
 
-  .boxes__bg {
-    background: url("../img/login.jpg") right center no-repeat;
-    background-size: cover;
-    border-radius: 0.5rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+	.boxes__bg {
+		background: url("../img/login.jpg") right center no-repeat;
+		background-size: cover;
+		border-radius: 0.5rem;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 
-  .boxes__inputs {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem;
+	.boxes__inputs {
+		display: flex;
+		flex-direction: column;
+		padding: 3rem;
 
-    h1 {
-      width: 100%;
+		h1 {
+			width: 100%;
 
-      img {
-        width: 7rem;
-      }
+			img {
+				width: 7rem;
+			}
 
-      p {
-        font-weight: 300;
-        font-size: 2rem;
-      }
-    }
-  }
+			p {
+				font-weight: 300;
+				font-size: 2rem;
+			}
+		}
+	}
 
-  .login-input-box {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+	.login-input-box {
+		margin-top: 7rem;
+		margin-bottom: 7rem;
 
-    label {
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-      display: block;
-      margin-top: 1.5rem;
-    }
-  }
+		label {
+			font-weight: 500;
+			margin-bottom: 0.5rem;
+			display: block;
+			margin-top: 1.5rem;
+		}
+	}
 
-  .login-input {
-    display: block;
-    width: 100%;
-    font-size: 1.5rem;
-    border: none;
-    border-bottom: 1px solid $gray;
-    padding: 0.5rem 0;
-    height: auto;
+	.login-input {
+		display: block;
+		width: 100%;
+		font-size: 1.5rem;
+		border: none;
+		border-bottom: 1px solid $gray;
+		padding: 0.5rem 0;
+		height: auto;
 
-    &:focus {
-      border-color: $main;
-    }
-  }
+		&:focus {
+			border-color: $main;
+		}
+	}
 
-  .login-btn {
-    margin-top: 7rem;
-    height: auto;
-    padding: 1rem;
-    width: 100%;
+	.login-btn {
+		margin-top: 7rem;
+		height: auto;
+		padding: 1rem;
+		width: 100%;
 
-    a {
-      font-weight: 600;
-      font-size: 1.25rem;
-      display: block;
-      color: $white;
-    }
-  }
+		a {
+			font-weight: 600;
+			font-size: 1.25rem;
+			display: block;
+			color: $white;
+		}
+	}
 }
 
 .main-logo {
-  display: flex;
-  justify-content: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+	display: flex;
+	justify-content: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 
-  img {
-    width: 8rem;
-    display: block;
-  }
+	img {
+		width: 8rem;
+		display: block;
+	}
 }
 
 // 기본 main-wrapper
 .main-wrap {
-  width: 100%;
-  height: 100vh;
-  background: $back;
+	width: 100%;
+	height: 100vh;
+	background: $back;
 
-  &.login-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	&.login-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 // 좌측 고정 메뉴 스타일
 .main-menu {
-  width: 19rem;
-  height: 100vh;
-  background: $white;
-  color: $black;
-  box-shadow: 3px 0 10px rgba(50, 70, 90, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
+	width: 19rem;
+	height: 100vh;
+	background: $white;
+	color: $black;
+	box-shadow: 3px 0 10px rgba(50, 70, 90, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
 
-  .menu-wrap {
-    width: 100%;
-    padding: 2rem 0;
-    font-size: 1.2rem;
+	.menu-wrap {
+		width: 100%;
+		padding: 2rem 0;
+		font-size: 1.2rem;
 
-    .menu-list {
-      border-bottom: 1px solid $gray;
-      position: relative;
+		.menu-list {
+			border-bottom: 1px solid $gray;
+			position: relative;
 
-      &:before {
-        content: "";
-        width: 1.5rem;
-        height: 1.5rem;
-        display: block;
-        position: absolute;
-        top: 1.25rem;
-        left: 2.25rem;
-      }
+			&:before {
+				content: "";
+				width: 1.5rem;
+				height: 1.5rem;
+				display: block;
+				position: absolute;
+				top: 1.25rem;
+				left: 2.25rem;
+			}
 
-      &:nth-child(1) {
-        &:before {
-          background: url("../img/menu.png") 0 center no-repeat;
-          background-size: cover;
-        }
-      }
+			&:nth-child(1) {
+				&:before {
+					background: url("../img/menu.png") 0 center no-repeat;
+					background-size: cover;
+				}
+			}
 
-      &:nth-child(2) {
-        &:before {
-          background: url("../img/menu.png") -1.5rem center no-repeat;
-          background-size: cover;
-        }
-      }
+			&:nth-child(2) {
+				&:before {
+					background: url("../img/menu.png") -1.5rem center no-repeat;
+					background-size: cover;
+				}
+			}
 
-      &:nth-child(3) {
-        &:before {
-          background: url("../img/menu.png") -3rem center no-repeat;
-          background-size: cover;
-        }
-      }
+			&:nth-child(3) {
+				&:before {
+					background: url("../img/menu.png") -3rem center no-repeat;
+					background-size: cover;
+				}
+			}
 
-      &:nth-child(4) {
-        &:before {
-          background: url("../img/menu.png") -4.5rem center no-repeat;
-          background-size: cover;
-        }
-      }
+			&:nth-child(4) {
+				&:before {
+					background: url("../img/menu.png") -4.5rem center no-repeat;
+					background-size: cover;
+				}
+			}
 
-      &:nth-child(5) {
-        &:before {
-          background: url("../img/menu.png") -6rem center no-repeat;
-          background-size: cover;
-        }
-      }
+			&:nth-child(5) {
+				&:before {
+					background: url("../img/menu.png") -6rem center no-repeat;
+					background-size: cover;
+				}
+			}
 
-      &:nth-child(6) {
-        &:before {
-          background: url("../img/menu.png") -7.5rem center no-repeat;
-          background-size: cover;
-        }
-      }
+			&:nth-child(6) {
+				&:before {
+					background: url("../img/menu.png") -7.5rem center no-repeat;
+					background-size: cover;
+				}
+			}
 
-      &:last-child {
-        border: none;
-      }
-    }
+			&:last-child {
+				border: none;
+			}
+		}
 
-    span {
-      font-weight: 500;
-      transition: all 0.2s $easing;
-      padding: 1rem 0 1rem 5rem;
-      display: block;
+		span {
+			font-weight: 500;
+			transition: all 0.2s $easing;
+			padding: 1rem 0 1rem 5rem;
+			display: block;
 
-      &.active {
-        color: $main;
-        font-weight: 600;
-      }
+			&.active {
+				color: $main;
+				font-weight: 600;
+			}
 
-      &:not(.active):hover {
-        opacity: 0.5;
-      }
-    }
+			&:not(.active):hover {
+				opacity: 0.5;
+			}
+		}
 
-    .menu-list-sub {
-      margin-top: -0.75rem;
-      margin-bottom: 0.5rem;
+		.menu-list-sub {
+			margin-top: -0.75rem;
+			margin-bottom: 0.5rem;
 
-      li {
-        padding: 0.4rem 0;
-        font-size: 1rem;
-        font-weight: 300;
-        margin-left: 5rem;
+			li {
+				padding: 0.4rem 0;
+				font-size: 1rem;
+				font-weight: 300;
+				margin-left: 5rem;
 
-        &.mt {
-          margin-top: 0.5rem;
-        }
-      }
-    }
-  }
+				&.mt {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+	}
 
-  .logout {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid $gray;
-    color: $dark;
-    padding: 0.35rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.85rem;
-  }
+	.logout {
+		position: absolute;
+		bottom: 3rem;
+		left: 50%;
+		transform: translateX(-50%);
+		border: 1px solid $gray;
+		color: $dark;
+		padding: 0.35rem 1rem;
+		border-radius: 0.5rem;
+		font-size: 0.85rem;
+	}
 }
 
 // 컨텐츠 표시 영역 지정 스타일
 .content-wrap {
-  width: calc(100vw - 19rem);
-  height: 100vw;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: $back;
-  padding: 1rem 2rem 2rem;
+	width: calc(100vw - 19rem);
+	height: 100vw;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: $back;
+	padding: 1rem 2rem 2rem;
 
-  .content-title {
-    font-size: 2.5rem;
-  }
+	.content-title {
+		font-size: 2.5rem;
+	}
 
-  .content-box {
-    width: 100%;
-    background: $white;
-    margin-top: 1rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
-    min-height: calc(100vh - 20rem);
-    max-height: calc(100vh - 15.5rem);
-    overflow: hidden;
-    overflow-y: auto;
-    position: relative;
+	.content-box {
+		width: 100%;
+		background: $white;
+		margin-top: 1rem;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
+		min-height: calc(100vh - 20rem);
+		max-height: calc(100vh - 15.5rem);
+		overflow: hidden;
+		overflow-y: auto;
+		position: relative;
 
-    &.box__height {
-      max-height: calc(100vh - 7rem);
-      overflow-y: auto;
-    }
+		&.box__height {
+			max-height: calc(100vh - 7rem);
+			overflow-y: auto;
+		}
 
-    h4 {
-      margin-bottom: 0.75rem;
-    }
-  }
+		h4 {
+			margin-bottom: 0.75rem;
+		}
+	}
 }
 
 // 유틸 기본 스타일 지정
 .util-box {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 1.5rem;
-  align-items: flex-end;
-  background: $white;
-  border-radius: 0.5rem;
-  padding: 1.5rem 2rem;
-  margin-top: 1rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 1.5rem;
+	align-items: flex-end;
+	background: $white;
+	border-radius: 0.5rem;
+	padding: 1.5rem 2rem;
+	margin-top: 1rem;
 
-  .util__search {
-    display: flex;
-    align-items: flex-end;
-  }
+	.util__search {
+		display: flex;
+		align-items: flex-end;
+	}
 
-  .input-box {
-    &.ml {
-      margin-left: 1.5rem;
-    }
+	.input-box {
+		&.ml {
+			margin-left: 1.5rem;
+		}
 
-    &.ml-2 {
-      margin-left: 4rem;
-    }
+		&.ml-2 {
+			margin-left: 4rem;
+		}
 
-    .input-div {
-      display: flex;
-      align-items: center;
-    }
+		.input-div {
+			display: flex;
+			align-items: center;
+		}
 
-    .util__label {
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 0.25rem;
-    }
+		.util__label {
+			font-size: 0.9rem;
+			font-weight: 500;
+			margin-bottom: 0.25rem;
+		}
 
-    .util__text {
-      font-size: 1.7rem;
-      font-weight: 300;
+		.util__text {
+			font-size: 1.7rem;
+			font-weight: 300;
 
-      &.is {
-        color: $green;
-      }
+			&.is {
+				color: $green;
+			}
 
-      &.none {
-        color: $gray;
-      }
-    }
-  }
+			&.none {
+				color: $gray;
+			}
+		}
+	}
 }
 
 // 테이블 기본 스타일 정의
 table {
-  width: 100%;
-  border-collapse: collapse;
+	width: 100%;
+	border-collapse: collapse;
 
-  thead {
-    width: 100%;
-    font-weight: 500;
-    text-align: center;
-    border-bottom: 1px solid $dark;
+	thead {
+		width: 100%;
+		font-weight: 500;
+		text-align: center;
+		border-bottom: 1px solid $dark;
 
-    td {
-      padding: 1rem;
+		td {
+			padding: 1rem;
 
-      .sort {
-        cursor: pointer;
-        position: relative;
+			.sort {
+				cursor: pointer;
+				position: relative;
 
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          width: 1rem;
-          height: 1rem;
-          background: url("../img/sort.svg") center no-repeat;
-          top: 0.28rem;
-          right: -1.3rem;
-          opacity: 0.6;
-        }
-      }
-    }
-  }
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 1rem;
+					height: 1rem;
+					background: url("../img/sort.svg") center no-repeat;
+					top: 0.28rem;
+					right: -1.3rem;
+					opacity: 0.6;
+				}
+			}
+		}
+	}
 
-  tbody {
-    width: 100%;
-    font-weight: 300;
+	tbody {
+		width: 100%;
+		font-weight: 300;
 
-    tr {
-      border-top: 1px solid $gray;
+		tr {
+			border-top: 1px solid $gray;
 
-      &:first-child {
-        border: none;
-      }
-    }
+			&:first-child {
+				border: none;
+			}
+		}
 
-    tr:nth-child(2n) {
-      background: $gray3;
-    }
+		tr:nth-child(2n) {
+			background: $gray3;
+		}
 
-    tr:hover {
-      background: $gray2;
-      cursor: pointer;
-    }
+		tr:hover {
+			background: $gray2;
+			cursor: pointer;
+		}
 
-    td {
-      padding: 0.9rem 0;
-    }
+		td {
+			padding: 0.9rem 0;
+		}
 
-    .table-title {
-      padding-left: 2rem;
+		.table-title {
+			padding-left: 2rem;
 
-      p {
-        overflow: hidden;
-        width: 45vw;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+			p {
+				overflow: hidden;
+				width: 45vw;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
 
-        &.wide {
-          width: 60vw;
-        }
-      }
-    }
-  }
+				&.wide {
+					width: 60vw;
+				}
+			}
+		}
+	}
 }
 
 .tac {
-  text-align: center;
+	text-align: center;
 }
 
 .w5 {
-  width: 5rem;
+	width: 5rem;
 }
 
 .w8 {
-  width: 8rem;
+	width: 8rem;
 }
 
 .w10 {
-  width: 10rem;
+	width: 10rem;
 }
 
 .w15 {
-  width: 15rem;
+	width: 15rem;
 }
 
 .w20 {
-  width: 20rem;
+	width: 20rem;
 }
 
 // pagination 공통 스타일링
 .pagination {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
 
-  span {
-    border: 1px solid $gray4;
-    font-weight: 300;
-    padding: 0.25rem 0.5rem;
-    width: 2rem;
-    text-align: center;
-    border-right: none;
-    color: $dark2;
-    cursor: pointer;
+	span {
+		border: 1px solid $gray4;
+		font-weight: 300;
+		padding: 0.25rem 0.5rem;
+		width: 2rem;
+		text-align: center;
+		border-right: none;
+		color: $dark2;
+		cursor: pointer;
 
-    &:nth-child(11) {
-      border-right: 1px solid $gray4;
-      width: 2.25rem;
-    }
+		&:nth-child(11) {
+			border-right: 1px solid $gray4;
+			width: 2.25rem;
+		}
 
-    &:hover {
-      background: $gray2;
-    }
+		&:hover {
+			background: $gray2;
+		}
 
-    &.active {
-      background: $main;
-      color: $white;
-      border-color: $white;
-      font-weight: 500;
-    }
-  }
+		&.active {
+			background: $main;
+			color: $white;
+			border-color: $white;
+			font-weight: 500;
+		}
+	}
 
-  .pagination__prev-btn {
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    margin-right: 0.5rem;
-    background: url("../img/arrow-01.png") 0 center no-repeat;
-    background-size: cover;
+	.pagination__prev-btn {
+		cursor: pointer;
+		width: 2rem;
+		height: 2rem;
+		margin-right: 0.5rem;
+		background: url("../img/arrow-01.png") 0 center no-repeat;
+		background-size: cover;
 
-    &:hover {
-      opacity: 0.7;
-    }
-  }
+		&:hover {
+			opacity: 0.7;
+		}
+	}
 
-  .pagination__next-btn {
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    margin-left: 0.5rem;
-    background: url("../img/arrow-01.png") -2rem center no-repeat;
-    background-size: cover;
+	.pagination__next-btn {
+		cursor: pointer;
+		width: 2rem;
+		height: 2rem;
+		margin-left: 0.5rem;
+		background: url("../img/arrow-01.png") -2rem center no-repeat;
+		background-size: cover;
 
-    &:hover {
-      opacity: 0.7;
-    }
-  }
+		&:hover {
+			opacity: 0.7;
+		}
+	}
 }
 
 // flex center클래스
 .jcc {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 .flex {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 // 임시 엘레먼트 스타일
 .temp {
-  color: $main;
-  text-decoration: underline;
+	color: $main;
+	text-decoration: underline;
 }
 
 .util__search {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .util-btn__box {
-  &.fe {
-    display: flex;
-    justify-content: flex-end;
-  }
+	&.fe {
+		display: flex;
+		justify-content: flex-end;
+	}
 }
 
 // popup 공통 스타일링
 .popup-wrap {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background: $rgba;
-  display: none;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background: $rgba;
+	display: none;
+	justify-content: center;
+	align-items: center;
 
-  &.active {
-    display: flex;
-  }
+	&.active {
+		display: flex;
+	}
 
-  .popup-box {
-    background: $white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px $rgba;
-    min-width: 30rem;
-  }
+	.popup-box {
+		background: $white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 0 10px $rgba;
+		min-width: 30rem;
+	}
 
-  .popup__title {
-    font-size: 1.75rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
+	.popup__title {
+		font-size: 1.75rem;
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
 
-  .popup__text {
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 2;
-  }
+	.popup__text {
+		font-size: 1.2rem;
+		font-weight: 300;
+		line-height: 2;
+	}
 
-  .popup-btn-box {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 4rem;
+	.popup-btn-box {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 4rem;
 
-    .del-btn {
-      margin-left: 0.75rem;
-    }
-  }
+		.del-btn {
+			margin-left: 0.75rem;
+		}
+	}
 }
 
 // 카테고리 스타일
 .category {
-  border: 1px solid $green;
-  padding: 0.3rem 0.7rem;
-  font-size: 0.8rem;
-  color: $green;
-  font-weight: 500;
-  border-radius: 0.75rem;
-  display: inline-block;
+	border: 1px solid $green;
+	padding: 0.3rem 0.7rem;
+	font-size: 0.8rem;
+	color: $green;
+	font-weight: 500;
+	border-radius: 0.75rem;
+	display: inline-block;
 }
 
 // 본문 작성 정보 공용 스타일
 .detail-info {
-  width: 100%;
-  margin-top: 3rem;
-  color: $dark;
-  font-size: 1rem;
+	width: 100%;
+	margin-top: 3rem;
+	color: $dark;
+	font-size: 1rem;
 
-  .divider {
-    display: inline-block;
-    height: 0.1rem;
-    width: 0.1rem;
-    border-radius: 1rem;
-    background: $dark;
-    transform: translateY(-0.25rem);
-    margin: 0 0.25rem;
-  }
+	.divider {
+		display: inline-block;
+		height: 0.1rem;
+		width: 0.1rem;
+		border-radius: 1rem;
+		background: $dark;
+		transform: translateY(-0.25rem);
+		margin: 0 0.25rem;
+	}
 }
 
 .mt {
-  margin-top: 1.5rem;
+	margin-top: 1.5rem;
 }
 
 .loading-wrap {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 9999;
-  background: rgba(255, 255, 255, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: 9999;
+	background: rgba(255, 255, 255, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  .lds-roller {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin-top: -1rem;
-  }
+	.lds-roller {
+		display: inline-block;
+		position: relative;
+		width: 80px;
+		height: 80px;
+		margin-top: -1rem;
+	}
 
-  .lds-roller div {
-    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    transform-origin: 40px 40px;
-  }
+	.lds-roller div {
+		animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+		transform-origin: 40px 40px;
+	}
 
-  .lds-roller div:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: $main;
-    margin: -4px 0 0 -4px;
-  }
+	.lds-roller div:after {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: $main;
+		margin: -4px 0 0 -4px;
+	}
 
-  .lds-roller div:nth-child(1) {
-    animation-delay: -0.036s;
-  }
+	.lds-roller div:nth-child(1) {
+		animation-delay: -0.036s;
+	}
 
-  .lds-roller div:nth-child(1):after {
-    top: 63px;
-    left: 63px;
-  }
+	.lds-roller div:nth-child(1):after {
+		top: 63px;
+		left: 63px;
+	}
 
-  .lds-roller div:nth-child(2) {
-    animation-delay: -0.072s;
-  }
+	.lds-roller div:nth-child(2) {
+		animation-delay: -0.072s;
+	}
 
-  .lds-roller div:nth-child(2):after {
-    top: 68px;
-    left: 56px;
-  }
-  .lds-roller div:nth-child(3) {
-    animation-delay: -0.108s;
-  }
+	.lds-roller div:nth-child(2):after {
+		top: 68px;
+		left: 56px;
+	}
+	.lds-roller div:nth-child(3) {
+		animation-delay: -0.108s;
+	}
 
-  .lds-roller div:nth-child(3):after {
-    top: 71px;
-    left: 48px;
-  }
+	.lds-roller div:nth-child(3):after {
+		top: 71px;
+		left: 48px;
+	}
 
-  .lds-roller div:nth-child(4) {
-    animation-delay: -0.144s;
-  }
+	.lds-roller div:nth-child(4) {
+		animation-delay: -0.144s;
+	}
 
-  .lds-roller div:nth-child(4):after {
-    top: 72px;
-    left: 40px;
-  }
+	.lds-roller div:nth-child(4):after {
+		top: 72px;
+		left: 40px;
+	}
 
-  .lds-roller div:nth-child(5) {
-    animation-delay: -0.18s;
-  }
+	.lds-roller div:nth-child(5) {
+		animation-delay: -0.18s;
+	}
 
-  .lds-roller div:nth-child(5):after {
-    top: 71px;
-    left: 32px;
-  }
+	.lds-roller div:nth-child(5):after {
+		top: 71px;
+		left: 32px;
+	}
 
-  .lds-roller div:nth-child(6) {
-    animation-delay: -0.216s;
-  }
+	.lds-roller div:nth-child(6) {
+		animation-delay: -0.216s;
+	}
 
-  .lds-roller div:nth-child(6):after {
-    top: 68px;
-    left: 24px;
-  }
+	.lds-roller div:nth-child(6):after {
+		top: 68px;
+		left: 24px;
+	}
 
-  .lds-roller div:nth-child(7) {
-    animation-delay: -0.252s;
-  }
+	.lds-roller div:nth-child(7) {
+		animation-delay: -0.252s;
+	}
 
-  .lds-roller div:nth-child(7):after {
-    top: 63px;
-    left: 17px;
-  }
+	.lds-roller div:nth-child(7):after {
+		top: 63px;
+		left: 17px;
+	}
 
-  .lds-roller div:nth-child(8) {
-    animation-delay: -0.288s;
-  }
+	.lds-roller div:nth-child(8) {
+		animation-delay: -0.288s;
+	}
 
-  .lds-roller div:nth-child(8):after {
-    top: 56px;
-    left: 12px;
-  }
+	.lds-roller div:nth-child(8):after {
+		top: 56px;
+		left: 12px;
+	}
 }
 
 .message-wrap {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  .message {
-    margin-top: 20rem;
-    text-align: center;
-    padding: 0.75rem 1.5rem;
-    color: $white;
-    border-radius: 2rem;
-    font-size: 1.25rem;
-    font-weight: 500;
-    transition: 0.5s all;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(3.5rem);
+	.message {
+		margin-top: 20rem;
+		text-align: center;
+		padding: 0.75rem 1.5rem;
+		color: $white;
+		border-radius: 2rem;
+		font-size: 1.25rem;
+		font-weight: 500;
+		transition: 0.5s all;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(3.5rem);
 
-    &.positive-m {
-      background: $main;
-    }
+		&.positive-m {
+			background: $main;
+		}
 
-    &.negative-m {
-      background: $red;
-    }
+		&.negative-m {
+			background: $red;
+		}
 
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-  }
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
 
-  .test-btns {
-    position: absolute;
-    bottom: 10rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+	.test-btns {
+		position: absolute;
+		bottom: 10rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 @keyframes lds-roller {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.error-wrap {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+
+	h1 {
+		font-size: 5rem;
+		font-weight: 300;
+	}
+	p {
+		font-size: 1.5rem;
+		line-height: 1.5;
+		font-weight: 300;
+		opacity: 0.7;
+	}
+
+	.btn {
+		margin-top: 2rem;
+	}
 }

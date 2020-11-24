@@ -383,12 +383,15 @@
 }
 
 .user-text {
-	font-size: 1.15rem;
 	font-weight: 300;
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
 	line-height: 2;
 	padding-right: 6rem;
+
+	p {
+		font-size: 1.1rem !important;
+	}
 }
 
 .user-header {

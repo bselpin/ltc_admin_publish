@@ -15,7 +15,7 @@
 }
 
 .edit-box {
-	width: 68%;
+	width: 100%;
 }
 
 .summary-box {
@@ -200,20 +200,12 @@
 }
 
 .note-editable {
+	padding: 2.5rem !important;
+
 	blockquote {
 		font-size: 0.9rem !important;
 		font-weight: 600 !important;
 		color: $gray5 !important;
-	}
-
-	ul,
-	li {
-		list-style-type: disc !important;
-	}
-
-	ul,
-	ol {
-		list-style-type: decimal !important;
 	}
 
 	h1 {

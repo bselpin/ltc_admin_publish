@@ -102,7 +102,7 @@
 	margin-bottom: 1rem;
 
 	blockquote {
-		font-size: 1.8rem !important;
+		font-size: 0.9rem !important;
 		font-weight: 600 !important;
 		color: $gray5 !important;
 	}
@@ -121,20 +121,20 @@
 		background: $main !important;
 		color: #fff !important;
 		font-size: 1.3rem !important;
-		padding: 1rem 1.3rem !important;
+		padding: 0.6rem 0.9rem !important;
 		font-weight: 500 !important;
 		border-radius: 0.7rem !important;
-		margin-bottom: 2rem !important;
+		margin-bottom: 1rem !important;
 	}
 
 	h2 {
 		font-size: 1.3rem !important;
 		color: $main !important;
 		border: 1px solid $main !important;
-		padding: 1rem 1.3rem !important;
+		padding: 0.6rem 0.9rem !important;
 		font-weight: 500 !important;
 		border-radius: 0.7rem !important;
-		margin-bottom: 2rem !important;
+		margin-bottom: 1rem !important;
 	}
 
 	h3 {
@@ -142,7 +142,7 @@
 	}
 
 	hr {
-		margin: 2rem 0 !important;
+		margin: 1rem 0 !important;
 		border-color: $gray3 !important;
 		border-bottom: none !important;
 	}
@@ -159,16 +159,20 @@
 	}
 
 	strong {
-		font-size: 2rem !important;
+		font-size: 1.1rem !important;
 		font-family: $noto !important;
 		line-height: 2.2 !important;
 	}
 
 	span {
-		font-size: 2rem !important;
+		font-size: 1.1rem !important;
 		font-family: $noto !important;
 		font-weight: 300 !important;
 		line-height: 2.2 !important;
+	}
+
+	img {
+		width: auto;
 	}
 
 	img {

@@ -32,7 +32,7 @@
 
 // html 기본
 html {
-	font-size: 16px;
+	font-size: 15px;
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
@@ -74,10 +74,6 @@ input {
 	&::placeholder {
 		color: $gray;
 	}
-}
-
-input[type="file"] {
-	display: none;
 }
 
 label {
@@ -721,9 +717,8 @@ table {
 		color: $dark2;
 		cursor: pointer;
 
-		&:nth-child(11) {
+		&:last-child {
 			border-right: 1px solid $gray4;
-			width: 2.25rem;
 		}
 
 		&:hover {
@@ -1060,4 +1055,8 @@ table {
 	.btn {
 		margin-top: 2rem;
 	}
+}
+
+.add-picture {
+	display: none;
 }

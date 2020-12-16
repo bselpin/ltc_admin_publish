@@ -1,190 +1,190 @@
 @import "Variables.scss";
 
 .qna-header {
-  .qna-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 0.5rem;
-  }
+	.qna-title {
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin-top: 0.5rem;
+	}
 
-  .qna-title-box {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0.65rem;
-    border-bottom: 1px solid $gray;
-  }
+	.qna-title-box {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0.65rem;
+		border-bottom: 1px solid $gray;
+	}
 }
 
 .qna-body {
-  font-size: 1.1rem;
-  font-weight: 300;
-  padding-bottom: 5rem;
-  padding-top: 2rem;
-  padding-right: 20rem;
-  margin-bottom: 1rem;
-  line-height: 2.2;
-  max-height: calc(100vh - 20.5rem);
-  border-bottom: 1px solid $gray;
-  overflow-y: auto;
+	font-size: 1.1rem;
+	font-weight: 300;
+	padding-bottom: 5rem;
+	padding-top: 2rem;
+	padding-right: 10rem;
+	margin-bottom: 1rem;
+	line-height: 2.2;
+	max-height: calc(100vh - 20.5rem);
+	width: 100%;
+	border-bottom: 1px solid $gray;
+	overflow-y: auto;
 
-  .qna-reply {
-    background: $gray3;
-    padding: 1.5rem 2rem 1.5rem 4rem;
-    border-radius: 1rem;
-    margin-top: 1.5rem;
-    position: relative;
+	.qna-reply {
+		background: $gray3;
+		padding: 1.5rem 2rem 1.5rem 4rem;
+		border-radius: 1rem;
+		margin-top: 1.5rem;
+		position: relative;
 
-    &.hiding {
-      color: $gray !important;
+		&.hiding {
+			color: $gray !important;
 
-      span {
-        color: $gray;
-      }
-    }
+			span {
+				color: $gray;
+			}
+		}
 
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 1rem;
-      height: 1rem;
-      border-left: 1px solid $dark;
-      border-bottom: 1px solid $dark;
-      left: 2rem;
-      top: 2rem;
-    }
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 1rem;
+			height: 1rem;
+			border-left: 1px solid $dark;
+			border-bottom: 1px solid $dark;
+			left: 2rem;
+			top: 2rem;
+		}
 
-    .reply-title {
-      font-size: 1.2rem;
-      font-weight: 500;
-      border-bottom: 1px solid $gray;
-      padding-bottom: 1rem;
-      display: flex;
-      justify-content: space-between;
-    }
+		.reply-title {
+			font-size: 1.2rem;
+			font-weight: 500;
+			border-bottom: 1px solid $gray;
+			padding-bottom: 1rem;
+			display: flex;
+			justify-content: space-between;
+		}
 
-    .reply-text {
-      margin-top: 0.75rem;
-      padding-right: 20rem;
-    }
-  }
+		.reply-text {
+			margin-top: 0.75rem;
+			padding-right: 20rem;
+		}
+	}
 
-  .more {
-    cursor: pointer;
-    width: 100%;
-    border: 1px solid $gray;
-    text-align: center;
-    padding: 0.3rem;
-    font-size: 0.9rem;
-    margin-top: 1.5rem;
-    border-radius: 0.5rem;
+	.more {
+		cursor: pointer;
+		width: 100%;
+		border: 1px solid $gray;
+		text-align: center;
+		padding: 0.3rem;
+		font-size: 0.9rem;
+		margin-top: 1.5rem;
+		border-radius: 0.5rem;
 
-    &.hide {
-      display: none;
-    }
+		&.hide {
+			display: none;
+		}
 
-    &:hover {
-      opacity: 0.6;
-    }
-  }
+		&:hover {
+			opacity: 0.6;
+		}
+	}
 }
 
 .write-reply {
-  display: none;
-  margin-top: 1rem;
+	display: none;
+	margin-top: 1rem;
 
-  &.active {
-    display: block;
-  }
+	&.active {
+		display: block;
+	}
 
-  .label {
-    font-size: 1rem;
-    font-weight: 500;
-  }
+	.label {
+		font-size: 1rem;
+		font-weight: 500;
+	}
 }
 
 .reply-util {
-  position: relative;
+	position: relative;
 
-  .reply-util-confirm {
-    position: absolute;
-    background: $white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: none;
-    width: 6rem;
-    border-radius: 0.75rem;
-    top: 3.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 50;
+	.reply-util-confirm {
+		position: absolute;
+		background: $white;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		display: none;
+		width: 6rem;
+		border-radius: 0.75rem;
+		top: 3.5rem;
+		right: 0rem;
+		z-index: 50;
 
-    &.active {
-      display: flex;
-    }
+		&.active {
+			display: flex;
+		}
 
-    &:before {
-      content: "";
-      display: block;
-      width: 1rem;
-      height: 1rem;
-      background: $white;
-      position: absolute;
-      top: -0.5rem;
-      left: 50%;
-      transform: translateX(-50%) rotate(45deg);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      z-index: -1;
-    }
+		&:before {
+			content: "";
+			display: block;
+			width: 1rem;
+			height: 1rem;
+			background: $white;
+			position: absolute;
+			top: -0.5rem;
+			left: 50%;
+			transform: translateX(-50%) rotate(45deg);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			z-index: -1;
+		}
 
-    .confirm-btn {
-      display: inline-block;
-      height: 3rem;
-      width: 3rem;
-      cursor: pointer;
-      position: relative;
+		.confirm-btn {
+			display: inline-block;
+			height: 3rem;
+			width: 3rem;
+			cursor: pointer;
+			position: relative;
 
-      &.confirm__cancel {
-        background-color: $white;
-        background-image: url("../img/reply.png");
-        background-position: 0 center;
-        background-size: 6rem;
-        background-repeat: no-repeat;
-        border-radius: 0.75rem;
-      }
+			&.confirm__cancel {
+				background-color: $white;
+				background-image: url("../img/reply.png");
+				background-position: 0 center;
+				background-size: 6rem;
+				background-repeat: no-repeat;
+				border-radius: 0.75rem;
+			}
 
-      &.confirm__apply {
-        background-color: $white;
-        background-image: url("../img/reply.png");
-        background-position: -3rem center;
-        background-size: 6rem;
-        background-repeat: no-repeat;
-        border-radius: 0.75rem;
-      }
+			&.confirm__apply {
+				background-color: $white;
+				background-image: url("../img/reply.png");
+				background-position: -3rem center;
+				background-size: 6rem;
+				background-repeat: no-repeat;
+				border-radius: 0.75rem;
+			}
 
-      &:hover {
-        background-color: $gray3;
-        filter: brightness(0.95);
-      }
-    }
-  }
+			&:hover {
+				background-color: $gray3;
+				filter: brightness(0.95);
+			}
+		}
+	}
 }
 
 .reported {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: $red !important;
-  margin-left: 3rem;
-  position: relative;
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: $red !important;
+	margin-left: 3rem;
+	position: relative;
 
-  &:before {
-    content: "";
-    display: block;
-    background: url("../img/reported.svg") center no-repeat;
-    background-size: cover;
-    width: 1.75rem;
-    height: 1.75rem;
-    position: absolute;
-    top: -0.05rem;
-    left: -1.75rem;
-  }
+	&:before {
+		content: "";
+		display: block;
+		background: url("../img/reported.svg") center no-repeat;
+		background-size: cover;
+		width: 1.75rem;
+		height: 1.75rem;
+		position: absolute;
+		top: -0.05rem;
+		left: -1.75rem;
+	}
 }

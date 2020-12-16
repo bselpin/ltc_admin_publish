@@ -95,8 +95,8 @@
 	font-size: 1.1rem;
 	font-weight: 300;
 	line-height: 2.2;
-	padding: 3rem 20rem 6rem 3rem;
-	max-height: calc(100vh - 20rem);
+	padding: 3rem 10rem 6rem 3rem;
+	max-height: calc(100vh - 10rem);
 	overflow-y: auto;
 	border-bottom: 1px solid $gray;
 	margin-bottom: 1rem;
@@ -207,6 +207,7 @@
 
 .note-editable {
 	padding: 2.5rem !important;
+	height: calc(100vh - 33rem) !important;
 
 	blockquote {
 		font-size: 0.9rem !important;

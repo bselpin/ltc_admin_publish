@@ -32,7 +32,7 @@
 
 // html 기본
 html {
-	font-size: 15px;
+	font-size: 14px;
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
@@ -390,7 +390,7 @@ h1 {
 	.menu-wrap {
 		width: 100%;
 		padding: 2rem 0;
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 
 		.menu-list {
 			border-bottom: 1px solid $gray;
@@ -453,7 +453,7 @@ h1 {
 			}
 
 			ul {
-				margin-left: 5rem;
+				margin-left: 4.5rem;
 
 				li {
 					font-size: 1rem;
@@ -530,8 +530,8 @@ h1 {
 		padding: 2rem;
 		border-radius: 0.5rem;
 		box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
-		min-height: calc(100vh - 20rem);
-		max-height: calc(100vh - 15.5rem);
+		min-height: calc(100vh - 17rem);
+		max-height: calc(100vh - 10rem);
 		overflow: hidden;
 		overflow-y: auto;
 		position: relative;
@@ -603,6 +603,7 @@ h1 {
 table {
 	width: 100%;
 	border-collapse: collapse;
+	font-size: 1rem;
 
 	thead {
 		width: 100%;

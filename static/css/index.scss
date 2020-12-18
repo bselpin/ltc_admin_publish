@@ -511,7 +511,7 @@ h1 {
 // 컨텐츠 표시 영역 지정 스타일
 .content-wrap {
 	width: calc(100vw - 19rem);
-	height: 100vw;
+	height: 100vh;
 	overflow: hidden;
 	position: fixed;
 	top: 0;
@@ -530,8 +530,7 @@ h1 {
 		padding: 2rem;
 		border-radius: 0.5rem;
 		box-shadow: 3px 3px 10px rgba(50, 70, 90, 0.1);
-		min-height: calc(100vh - 17rem);
-		max-height: calc(100vh - 10rem);
+		height: calc(100vh - 17rem);
 		overflow: hidden;
 		overflow-y: auto;
 		position: relative;

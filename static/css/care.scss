@@ -5,50 +5,24 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	.flex-box {
-		width: 50%;
-		min-height: 22.5rem;
-
-		&.pl {
-			padding-left: 1rem;
-		}
-
-		&.pt {
-			padding-top: 0.75rem;
-		}
-
-		&.bt {
-			border-top: 1px solid $gray4;
-		}
-
-		&.bl {
-			border-left: 1px solid $gray4;
-		}
+	.detail-box {
+		width: 100%;
+		border-bottom: 1px solid $gray;
+		padding: 1.8rem 0;
 
 		.inner-flex {
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
 			align-items: center;
-			height: 100%;
-			margin-top: -2rem;
+		}
 
-			p {
-				margin-bottom: 1rem;
-				font-weight: 300;
-				font-size: 1.5rem;
+		p {
+			font-size: 1.3rem;
+			font-weight: 300;
+			margin-right: 1rem;
+		}
 
-				&.view {
-					cursor: pointer;
-					font-size: 0.9rem;
-					color: $main;
-					text-decoration: underline;
-				}
-			}
-
-			button {
-				margin: 0.5rem 0.5rem;
-			}
+		button {
+			margin-left: 0.5rem;
 		}
 	}
 }

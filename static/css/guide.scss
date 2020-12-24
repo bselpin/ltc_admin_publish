@@ -91,20 +91,58 @@
 }
 
 // 본문 디테일 페이지 바디
+
+.note-editable,
 .detail-body {
-	font-size: 1.1rem;
+	font-size: 2rem;
 	font-weight: 300;
-	line-height: 2.2;
-	padding: 3rem 10rem 6rem 3rem;
-	max-height: calc(100vh - 10rem);
-	overflow-y: auto;
-	border-bottom: 1px solid $gray;
-	margin-bottom: 1rem;
+	width: 100%;
+	font-family: $spoqa !important;
+	text-align: left !important;
+	padding: 2rem !important;
+	height: calc(100vh - 33rem);
+	padding-right: 1vw;
+
+	.guide-common {
+		width: 100%;
+	}
+
+	.attach-files {
+		padding: 1.5rem 2rem;
+		border: 1px solid $gray3;
+		border-radius: 1rem;
+		margin-top: 3rem;
+
+		h5 {
+			margin-bottom: 0.5rem;
+		}
+
+		a {
+			display: block;
+			font-size: 1.5rem;
+			padding: 1rem 0;
+			border-bottom: 1px solid $gray3;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 
 	blockquote {
-		font-size: 0.9rem !important;
-		font-weight: 600 !important;
+		font-size: 1rem !important;
+		font-weight: 300 !important;
 		color: $gray5 !important;
+
+		span {
+			font-size: 1rem !important;
+			font-weight: 300 !important;
+			color: $gray5 !important;
+		}
 	}
 
 	ul,
@@ -118,33 +156,90 @@
 	}
 
 	h1 {
-		// background: $main !important;
-		// color: #fff !important;
-		// font-size: 1.3rem !important;
-		padding: 0.6rem 0.9rem !important;
-		// font-weight: 500 !important;
-		border-radius: 0.7rem !important;
-		margin-bottom: 1rem !important;
+		font-size: 4.9rem !important;
+		line-height: 1 !important;
+		font-family: $bhan !important;
+		color: $main;
+
+		span {
+			font-size: 4.9rem !important;
+			line-height: 1 !important;
+			font-family: $bhan !important;
+			color: $main;
+		}
 	}
 
 	h2 {
-		// font-size: 1.3rem !important;
-		// color: $main !important;
-		border: 1px solid $main !important;
-		padding: 0.6rem 0.9rem !important;
-		// font-weight: 500 !important;
+		font-size: 1.5rem !important;
+		font-weight: 600 !important;
 		border-radius: 0.7rem !important;
-		margin-bottom: 1rem !important;
+		margin-bottom: 2rem !important;
+
+		span,
+		p {
+			font-size: 1.5rem !important;
+			font-weight: 600 !important;
+			border-radius: 0.7rem !important;
+			margin-bottom: 2rem !important;
+		}
 	}
 
 	h3 {
-		// font-size: 1.3rem !important;
+		font-size: 1.4rem !important;
+		font-weight: 600 !important;
+		position: relative;
+		padding-left: 1.1rem;
+		line-height: 1.8 !important;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 5px;
+			height: 1.4rem;
+			background: $main;
+			left: 0;
+			top: 0.65rem;
+		}
+
+		span,
+		p {
+			font-size: 1.4rem !important;
+			font-weight: 600 !important;
+			line-height: 1.8 !important;
+		}
 	}
 
-	hr {
-		margin: 1rem 0 !important;
-		// border-color: $gray3 !important;
-		border-bottom: none !important;
+	h4 {
+		font-size: 1.4rem !important;
+		margin-bottom: 1.4rem;
+		border-bottom: 1px solid $gray3;
+		border-top: 1px solid $gray3;
+		padding: 2rem 0;
+		padding-right: 3vw;
+		margin-bottom: 4rem;
+		line-height: 2 !important;
+
+		span,
+		p {
+			font-size: 1.4rem !important;
+			font-weight: 400 !important;
+			line-height: 2 !important;
+		}
+	}
+
+	h5 {
+		font-size: 1.2rem !important;
+		font-weight: 700 !important;
+		line-height: 1.2 !important;
+		margin-top: 1.5rem;
+
+		span,
+		p {
+			font-size: 1.2rem !important;
+			font-weight: 700 !important;
+			line-height: 1.2 !important;
+		}
 	}
 
 	img {
@@ -152,124 +247,55 @@
 	}
 
 	p {
-		// font-size: 1.2rem !important;
-		font-family: $noto !important;
-		// font-weight: 300 !important;
-		line-height: 2.2 !important;
+		font-size: 1.35rem !important;
+		font-family: $spoqa !important;
+		font-weight: 300 !important;
+		line-height: 2 !important;
+		margin-top: 0.6rem;
 	}
 
 	strong {
-		// font-size: 1.1rem !important;
-		font-family: $noto !important;
-		line-height: 2.2 !important;
+		font-family: $spoqa !important;
 	}
 
 	span {
-		// font-size: 1.1rem !important;
-		font-family: $noto !important;
-		// font-weight: 300 !important;
-		line-height: 2.2 !important;
+		font-size: 1.35rem !important;
+		font-family: $spoqa !important;
+		font-weight: 300 !important;
+		line-height: 2 !important;
 	}
 
-	img {
-		width: auto;
+	b {
+		font-size: 1.35rem !important;
+		font-family: $spoqa !important;
+		line-height: 2 !important;
+		font-weight: 500 !important;
 	}
 
-	img {
-		width: auto;
+	u {
+		text-decoration: none;
+		padding: 0;
 	}
 
 	a {
-		color: $main;
-		text-decoration: underline;
-		text-decoration-color: $main;
-	}
-
-	.detail-body__info {
-		font-size: 0.9rem;
-		font-weight: 400;
-		color: $dark2;
-		margin-top: 3rem;
-		width: 100%;
-		border-bottom: 1px solid $gray;
-		padding-bottom: 1rem;
-
-		.divider {
-			display: inline-block;
-			height: 0.9rem;
-			width: 1px;
-			background: $dark2;
-			margin: 0 0.75rem;
-			transform: translateY(0.15rem);
-		}
-	}
-}
-
-.note-editable {
-	padding: 2.5rem !important;
-	height: calc(100vh - 33rem) !important;
-
-	blockquote {
-		font-size: 0.9rem !important;
-		font-weight: 600 !important;
-		color: $gray5 !important;
-	}
-
-	h1 {
-		background: $main !important;
-		color: #fff !important;
-		font-size: 1.3rem !important;
-		padding: 0.6rem 0.9rem !important;
-		font-weight: 500 !important;
-		border-radius: 0.7rem !important;
-		margin-bottom: 1rem !important;
-	}
-
-	h2 {
-		font-size: 1.3rem !important;
+		font-size: 1.25rem !important;
 		color: $main !important;
-		border: 1px solid $main !important;
-		padding: 0.6rem 0.9rem !important;
-		font-weight: 500 !important;
-		border-radius: 0.7rem !important;
-		margin-bottom: 1rem !important;
-	}
-
-	h3 {
-		font-size: 1.3rem !important;
+		text-decoration: none;
+		border-bottom: 1px solid $main;
 	}
 
 	hr {
-		margin: 1rem 0 !important;
-		border-color: $gray3 !important;
-		border-bottom: none !important;
-	}
-
-	img {
-		max-width: 100% !important;
-	}
-
-	p {
-		font-size: 1.2rem !important;
-		font-family: $noto !important;
-		font-weight: 300 !important;
-		line-height: 2.2 !important;
-	}
-
-	strong {
-		font-size: 1.1rem !important;
-		font-family: $noto !important;
-		line-height: 2.2 !important;
-	}
-
-	span {
-		font-size: 1.1rem !important;
-		font-family: $noto !important;
-		font-weight: 300 !important;
-		line-height: 2.2 !important;
+		border: 1px solid $gray4 !important;
 	}
 
 	img {
 		width: auto;
 	}
+}
+
+.detail-body {
+	height: calc(100vh - 20rem);
+	overflow-y: scroll;
+	margin-bottom: 1.5rem;
+	padding-right: calc(10vw + 15rem) !important;
 }

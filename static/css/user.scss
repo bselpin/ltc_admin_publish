@@ -1,63 +1,160 @@
 @import "Variables.scss";
 
 .util__search {
-  ._temp-datepicker {
-    font-weight: 300;
-    font-size: 1rem;
-    height: 2.5rem;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid $dark2;
-  }
+	._temp-datepicker {
+		font-weight: 300;
+		font-size: 1rem;
+		height: 2.5rem;
+		padding: 0.5rem 0.75rem;
+		border: 1px solid $dark2;
+	}
 
-  .divider {
-    margin: 0 0.75rem;
-  }
+	.divider {
+		margin: 0 0.75rem;
+	}
 }
 
 .tabs {
-  ul {
-    display: flex;
+	ul {
+		display: flex;
+		list-style-type: none;
 
-    li {
-      a {
-        padding: 0.47rem 1rem;
-        margin: 0 0.5rem;
-        cursor: pointer;
-        border: 1px solid transparent;
-        display: block;
+		li {
+			a {
+				padding: 0.47rem 1rem;
+				margin: 0 0.5rem;
+				cursor: pointer;
+				border: 1px solid transparent;
+				display: block;
 
-        &.active {
-          border: 1px solid $main;
-        }
-      }
+				&.active {
+					border: 1px solid $main;
+				}
+			}
 
-      &:first-child {
-        margin-left: 0;
-      }
+			&:first-child {
+				margin-left: 0;
+			}
 
-      .count {
-        font-weight: 300;
-        color: $dark2;
-        margin-left: 0.25rem;
-      }
-    }
-  }
+			.count {
+				font-weight: 300;
+				color: $dark2;
+				margin-left: 0.25rem;
+			}
+		}
+	}
 }
 
 table {
-  .qna-title {
-    line-height: 2;
-  }
+	.qna-title {
+		line-height: 2;
+	}
 
-  .question {
-    font-weight: 600;
-    color: $red;
-    margin-right: 0.3rem;
-  }
+	.question {
+		font-weight: 600;
+		color: $red;
+		margin-right: 0.3rem;
+	}
 
-  .answer {
-    font-weight: 600;
-    color: $main;
-    margin-right: 0.45rem;
-  }
+	.answer {
+		font-weight: 600;
+		color: $main;
+		margin-right: 0.45rem;
+	}
+
+	.badge {
+		background: $main;
+		display: inline;
+		padding: 0.5rem 1rem;
+		color: #fff;
+		font-weight: 500;
+		border-radius: 0.5rem;
+		font-size: 1.15rem;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+.message-popup {
+	position: absolute;
+	padding: 1.75rem;
+	background: #fff;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+	border-radius: 0.5rem;
+	min-width: 34rem;
+	width: 30vw;
+	z-index: 99;
+	display: none;
+	opacity: 0;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+
+	&.active {
+		display: block;
+		opacity: 1;
+	}
+
+	h2 {
+		font-weight: 400;
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	.message-section {
+		background: $gray2;
+		line-height: 1.75;
+		padding: 1.25rem;
+		font-size: 1.1rem;
+		margin-top: 1.5rem;
+		max-height: 26rem;
+		overflow-y: scroll;
+	}
+}
+
+.user-info-box {
+	display: flex;
+	justify-content: space-between;
+
+	.inner-flex {
+		width: 48.5%;
+	}
+
+	.user {
+		display: flex;
+		align-items: center;
+	}
+
+	.img-wrap {
+		width: 4rem;
+		height: 4rem;
+		overflow: hidden;
+		position: relative;
+		border-radius: 50%;
+
+		.img-box {
+			width: 4rem;
+			height: 4rem;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+
+	.name {
+		font-size: 1.5rem;
+		margin-left: 1rem;
+	}
+
+	.user-intro {
+		margin-top: 1rem;
+		background: $gray2;
+		padding: 1.5rem;
+		font-size: 1.2rem;
+		line-height: 2;
+	}
 }

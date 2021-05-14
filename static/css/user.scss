@@ -145,16 +145,49 @@ table {
 		}
 	}
 
-	.name {
-		font-size: 1.5rem;
-		margin-left: 1rem;
-	}
-
 	.user-intro {
-		margin-top: 1rem;
 		background: $gray2;
 		padding: 1.5rem;
 		font-size: 1.2rem;
 		line-height: 2;
+
+		.label {
+			font-weight: 600;
+		}
+	}
+
+	.label {
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin-bottom: 1.5rem;
+	}
+
+	.gauge-wrap {
+		margin-top: 5rem;
+	}
+
+	.gauge-background {
+		margin: 0 auto;
+		width: 90%;
+		height: 1rem;
+		background: $gray2;
+		border-radius: 1rem;
+		position: relative;
+
+		.gauge {
+			position: absolute;
+			top: 0;
+			height: 1rem;
+			border-radius: 1rem;
+			left: 0;
+			background: $main;
+		}
+
+		.gauge-info {
+			position: absolute;
+			right: -5rem;
+			top: -3rem;
+			background: $gray2;
+		}
 	}
 }

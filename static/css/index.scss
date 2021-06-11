@@ -51,7 +51,6 @@ h4 {
 a {
 	text-decoration: none;
 	color: inherit;
-	cursor: pointer;
 }
 
 // input 스타일 기본 정의
@@ -1109,14 +1108,4 @@ table {
 
 .add-picture {
 	display: none;
-}
-
-.close-btn {
-	position: absolute;
-	cursor: pointer;
-	top: 1.5rem;
-	right: 1.5rem;
-	width: 2.5rem;
-	height: 2.5rem;
-	background: url("../img/close.svg") center no-repeat;
 }

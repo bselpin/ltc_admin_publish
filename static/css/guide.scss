@@ -145,193 +145,193 @@
 		}
 	}
 
-	// blockquote {
-	// 	font-size: 1rem !important;
-	// 	font-weight: 300 !important;
-	// 	color: $gray5 !important;
+	blockquote {
+		font-size: 1rem !important;
+		font-weight: 300 !important;
+		color: $gray5 !important;
 
-	// 	span {
-	// 		font-size: 1rem !important;
-	// 		font-weight: 300 !important;
-	// 		color: $gray5 !important;
-	// 	}
-	// }
+		span {
+			font-size: 1rem !important;
+			font-weight: 300 !important;
+			color: $gray5 !important;
+		}
+	}
 
-	// ul,
-	// li {
-	// 	list-style-type: disc !important;
-	// }
+	ul,
+	li {
+		list-style-type: disc !important;
+	}
 
-	// ul,
-	// ol {
-	// 	list-style-type: decimal !important;
-	// }
+	ul,
+	ol {
+		list-style-type: decimal !important;
+	}
 
-	// h1 {
-	// 	font-size: 4.9rem !important;
-	// 	line-height: 1 !important;
-	// 	font-family: $bhan !important;
-	// 	color: $main;
-	// 	position: relative;
+	h1 {
+		font-size: 4.9rem !important;
+		line-height: 1 !important;
+		font-family: $bhan !important;
+		color: $main;
+		position: relative;
 
-	// 	&:after {
-	// 		@include tagDesc;
-	// 		content: "h1";
-	// 	}
+		&:after {
+			@include tagDesc;
+			content: "h1";
+		}
 
-	// 	span {
-	// 		font-size: 4.9rem !important;
-	// 		line-height: 1 !important;
-	// 		font-family: $bhan !important;
-	// 		color: $main;
-	// 	}
-	// }
+		span {
+			font-size: 4.9rem !important;
+			line-height: 1 !important;
+			font-family: $bhan !important;
+			color: $main;
+		}
+	}
 
-	// h2 {
-	// 	font-size: 1.5rem !important;
-	// 	font-weight: 600 !important;
-	// 	border-radius: 0.7rem !important;
-	// 	margin-bottom: 2rem !important;
-	// 	position: relative;
+	h2 {
+		font-size: 1.5rem !important;
+		font-weight: 600 !important;
+		border-radius: 0.7rem !important;
+		margin-bottom: 2rem !important;
+		position: relative;
 
-	// 	&:after {
-	// 		@include tagDesc;
-	// 		content: "h2";
-	// 	}
+		&:after {
+			@include tagDesc;
+			content: "h2";
+		}
 
-	// 	span,
-	// 	p {
-	// 		font-size: 1.5rem !important;
-	// 		font-weight: 600 !important;
-	// 		border-radius: 0.7rem !important;
-	// 		margin-bottom: 2rem !important;
-	// 	}
-	// }
+		span,
+		p {
+			font-size: 1.5rem !important;
+			font-weight: 600 !important;
+			border-radius: 0.7rem !important;
+			margin-bottom: 2rem !important;
+		}
+	}
 
-	// h3 {
-	// 	font-size: 1.4rem !important;
-	// 	font-weight: 600 !important;
-	// 	position: relative;
-	// 	padding-left: 1.1rem;
-	// 	line-height: 1.8 !important;
+	h3 {
+		font-size: 1.4rem !important;
+		font-weight: 600 !important;
+		position: relative;
+		padding-left: 1.1rem;
+		line-height: 1.8 !important;
 
-	// 	&:before {
-	// 		@include tagDesc;
-	// 		content: "h3";
-	// 	}
+		&:before {
+			@include tagDesc;
+			content: "h3";
+		}
 
-	// 	&:after {
-	// 		content: "";
-	// 		display: block;
-	// 		position: absolute;
-	// 		width: 5px;
-	// 		height: 1.4rem;
-	// 		background: $main;
-	// 		left: 0;
-	// 		top: 0.65rem;
-	// 	}
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 5px;
+			height: 1.4rem;
+			background: $main;
+			left: 0;
+			top: 0.65rem;
+		}
 
-	// 	span,
-	// 	p {
-	// 		font-size: 1.4rem !important;
-	// 		font-weight: 600 !important;
-	// 		line-height: 1.8 !important;
-	// 	}
-	// }
+		span,
+		p {
+			font-size: 1.4rem !important;
+			font-weight: 600 !important;
+			line-height: 1.8 !important;
+		}
+	}
 
-	// h4 {
-	// 	font-size: 1.4rem !important;
-	// 	margin-bottom: 1.4rem;
-	// 	border-bottom: 1px solid $gray3;
-	// 	border-top: 1px solid $gray3;
-	// 	padding: 2rem 0;
-	// 	padding-right: 3vw;
-	// 	margin-bottom: 4rem;
-	// 	line-height: 2 !important;
-	// 	position: relative;
+	h4 {
+		font-size: 1.4rem !important;
+		margin-bottom: 1.4rem;
+		border-bottom: 1px solid $gray3;
+		border-top: 1px solid $gray3;
+		padding: 2rem 0;
+		padding-right: 3vw;
+		margin-bottom: 4rem;
+		line-height: 2 !important;
+		position: relative;
 
-	// 	&:after {
-	// 		@include tagDesc;
-	// 		content: "h4";
-	// 	}
+		&:after {
+			@include tagDesc;
+			content: "h4";
+		}
 
-	// 	span,
-	// 	p {
-	// 		font-size: 1.4rem !important;
-	// 		font-weight: 400 !important;
-	// 		line-height: 2 !important;
-	// 	}
-	// }
+		span,
+		p {
+			font-size: 1.4rem !important;
+			font-weight: 400 !important;
+			line-height: 2 !important;
+		}
+	}
 
-	// h5 {
-	// 	font-size: 1.2rem !important;
-	// 	font-weight: 700 !important;
-	// 	line-height: 1.2 !important;
-	// 	margin-top: 1.5rem;
-	// 	position: relative;
+	h5 {
+		font-size: 1.2rem !important;
+		font-weight: 700 !important;
+		line-height: 1.2 !important;
+		margin-top: 1.5rem;
+		position: relative;
 
-	// 	&:after {
-	// 		@include tagDesc;
-	// 		content: "h5";
-	// 	}
+		&:after {
+			@include tagDesc;
+			content: "h5";
+		}
 
-	// 	span,
-	// 	p {
-	// 		font-size: 1.2rem !important;
-	// 		font-weight: 700 !important;
-	// 		line-height: 1.2 !important;
-	// 	}
-	// }
+		span,
+		p {
+			font-size: 1.2rem !important;
+			font-weight: 700 !important;
+			line-height: 1.2 !important;
+		}
+	}
 
 	img {
 		max-width: 100% !important;
 	}
 
-	// p {
-	// 	font-size: 1.35rem !important;
-	// 	font-family: $spoqa !important;
-	// 	font-weight: 300 !important;
-	// 	line-height: 2 !important;
-	// 	margin-top: 0.6rem;
-	// }
+	p {
+		font-size: 1.35rem !important;
+		font-family: $spoqa !important;
+		font-weight: 300 !important;
+		line-height: 2 !important;
+		margin-top: 0.6rem;
+	}
 
-	// strong {
-	// 	font-family: $spoqa !important;
-	// }
+	strong {
+		font-family: $spoqa !important;
+	}
 
-	// span {
-	// 	font-size: 1.35rem !important;
-	// 	font-family: $spoqa !important;
-	// 	font-weight: 300 !important;
-	// 	line-height: 2 !important;
-	// }
+	span {
+		font-size: 1.35rem !important;
+		font-family: $spoqa !important;
+		font-weight: 300 !important;
+		line-height: 2 !important;
+	}
 
-	// b {
-	// 	font-size: 1.35rem !important;
-	// 	font-family: $spoqa !important;
-	// 	line-height: 2 !important;
-	// 	font-weight: 500 !important;
-	// }
+	b {
+		font-size: 1.35rem !important;
+		font-family: $spoqa !important;
+		line-height: 2 !important;
+		font-weight: 500 !important;
+	}
 
-	// u {
-	// 	text-decoration: none;
-	// 	padding: 0;
-	// }
+	u {
+		text-decoration: none;
+		padding: 0;
+	}
 
-	// a {
-	// 	font-size: 1.25rem !important;
-	// 	color: $main !important;
-	// 	text-decoration: none;
-	// 	border-bottom: 1px solid $main;
-	// }
+	a {
+		font-size: 1.25rem !important;
+		color: $main !important;
+		text-decoration: none;
+		border-bottom: 1px solid $main;
+	}
 
-	// hr {
-	// 	border: 1px solid $gray4 !important;
-	// }
+	hr {
+		border: 1px solid $gray4 !important;
+	}
 
-	// img {
-	// 	width: auto;
-	// }
+	img {
+		width: auto;
+	}
 }
 
 .detail-body {
